@@ -1,0 +1,53 @@
+{# 首页、归档、分类、标签 #}
+{% macro tpl() %}
+<main id="site-main" class="site-main outer" role="main">
+	<div class="inner">
+		<div class="post-feed">
+			{% for post in page.posts %}
+			<article class="post-card post {% if not post.feature_img_link %} no-image {% endif %}">
+				{% if post.feature_img_link %}
+				<a class="post-card-image-link" href="{{ url_for(post.path) }}">
+					<div class="post-card-image" style="background-image: url({{ post.feature_img_link }})"></div>
+				</a>
+				{% endif %}
+				<div class="post-card-content">
+					<a class="post-card-content-link" href="{{ url_for(post.path) }}">
+						<header class="post-card-header">
+							<span class="post-card-tags">
+								{% if post.categories and post.categories.length %}
+								{% for cate in post.categories %}
+								{{ cate.name }}
+								{% endfor %}| 
+								{% endif %}
+								<time datetime="{{ date_xml(post.date) }}" itemprop="datePublished">
+									{{ date(post.date, null) }}
+								</time>
+							</span>
+							<h2 class="post-card-title">{{ post.title }}</h2>
+						</header>
+						<section class="post-card-excerpt">
+							<p>
+								{% set num = 100 %}
+								{% if not post.feature_img_link %}
+								{% set num = 240 %}
+								{% endif %}
+								{% set content = post.content | striptags %}
+								{{ content.substring(0, num) }}
+								{% if content.length > num %}...{% endif %}
+							</p>
+						</section>
+					</a>
+					<footer class="post-card-meta">
+						{% if theme.author_image %}
+						<img class="author-profile-image" src="{{ theme.author_image }}" alt="{{ config.author }}" />
+						{% endif %}
+						<span class="post-card-author">{{ config.author }}</span>
+					</footer>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</div>
+	{% include 'public/pagination.swig' %}
+</main>
+{% endmacro %}

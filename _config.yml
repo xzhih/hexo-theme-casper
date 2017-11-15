@@ -1,0 +1,27 @@
+# config
+rss: 
+favicon: 
+blog_logo: 
+cover_image: https://demo.ghost.io/content/images/2017/07/blog-cover.jpg 
+# menu
+menu:
+  About: /about
+  Archives: /archives
+
+# author
+author_image: 
+
+# Social Links
+social:
+  facebook: https://www.facebook.com
+  twitter: https://www.twitter.com
+
+# widget
+widgets:
+  recent_posts: true
+  category: true
+  tagcloud: true
+
+
+# gallery
+## https://github.com/lzane/hexo-light-gallery
