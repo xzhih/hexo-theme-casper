@@ -1,27 +1,31 @@
 # config
-rss: 
-favicon: 
-blog_logo: 
-cover_image: https://demo.ghost.io/content/images/2017/07/blog-cover.jpg 
+rss:            # link
+favicon:        # link
+blog_logo:      # link
+header_image: //demo.ghost.io/content/images/2017/07/blog-cover.jpg 
+
 # menu
 menu:
   About: /about
   Archives: /archives
+  # you can add here
 
 # author
-author_image: 
+author_image:   # link
 
 # Social Links
 social:
   facebook: https://www.facebook.com
   twitter: https://www.twitter.com
+  # You only can use that I have added, I will keep adding
 
 # widget
 widgets:
   recent_posts: true
   category: true
   tagcloud: true
-
+  # This is a simple theme, I think 3 is enough.
 
 # gallery
-## https://github.com/lzane/hexo-light-gallery
+# https://github.com/sachinchoolur/lightgallery.js
+lightgallery: true

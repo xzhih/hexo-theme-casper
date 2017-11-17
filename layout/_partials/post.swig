@@ -18,21 +18,19 @@
             <h1 class="post-full-title">{{ page.title }}</h1>
         </header>
 
-        <article class="post-full {% if not (page.feature_img_link and page.feature_img) %} no-image {% endif %}">
+        <article class="post-full {% if not page.feature_img %} no-image {% endif %}">
 
-            {% if page.feature_img_link and page.feature_img %}
-            <figure class="post-full-image" style="background-image: url({{ page.feature_img_link }})">
+            {% if page.feature_img %}
+            <figure class="post-full-image" style="background-image: url({{ page.feature_img }})">
             </figure>
             {% endif %}
 
             <section class="post-full-content">
-                <div class="kg-card-markdown">
+                <div id="lightgallery" class="kg-card-markdown">
                     {{ page.content }}
                 </div>
             </section>
-
         </article>
-
     </div>
     {% include 'public/pagination.swig' %}
 </main>

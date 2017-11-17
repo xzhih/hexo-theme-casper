@@ -1,7 +1,7 @@
 {# header 部分, 控制页面中显示头部图像、标题 #}
 {# 非文章页面 header 显示 cover_img #}
 {% if not is_post() %}
-<header class="site-header outer {% if theme.cover_image %}" style="background-image: url({{ theme.cover_image }}) {% else %} no-cover {% endif %} ">
+<header class="site-header outer {% if theme.header_image %}" style="background-image: url({{ theme.header_image }}) {% else %} no-cover {% endif %} ">
     <div class="inner">
         {# 非首页, 导航栏在顶部 #}
         {% if not is_home() %}

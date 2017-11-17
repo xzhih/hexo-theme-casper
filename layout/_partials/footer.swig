@@ -14,4 +14,19 @@
 </footer>
 {% if is_post() %}
 {% include "public/fload-header.swig" %}
+{% if theme.lightgallery %}
+{{ css('css/lightgallery.min') }}
+{{ js('js/lightgallery.min') }}
+<script>
+	$(function () {
+		var postImg = $('#lightgallery').find('img');
+		postImg.addClass('post-img');
+		postImg.each(function () {
+			var imgSrc = $(this).attr('src');
+			$(this).attr('data-src', imgSrc);
+		});
+		$('#lightgallery').lightGallery({selector: '.post-img'});
+	});
+</script>
+{% endif %}
 {% endif %}

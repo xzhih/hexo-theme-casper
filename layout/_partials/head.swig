@@ -32,7 +32,7 @@
 	<title>{% if title %}{{ title }} | {% endif %}{{ config.title }}</title>
 	<meta name="description" content="{{ config.subtitle }}" />
 	<meta name="generator" content="{{ config.title }}">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 	{% if theme.rss %}
 	{{ feed_tag(theme.rss, [{title:config.title}])  }}
 	{% endif %}
@@ -43,4 +43,5 @@
 
 	{{ css('css/screen') }}
 	{{ css('css/style') }} 
+	{{ js('js/jquery') }}
 </head>

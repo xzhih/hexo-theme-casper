@@ -29,13 +29,15 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - 3 widgets ( I think no need more )
 - Tag, Category
 - Pagination
-- Syntax Highlighting
+- ~~Syntax Highlighting~~
 
 ## Installation
 
 **Install**
 
-`git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper`
+```
+git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper
+```
 
 **Enable**
 
@@ -84,7 +86,8 @@ widgets:
   # This is a simple theme, I think 3 is enough.
 
 # gallery
-## https://github.com/lzane/hexo-light-gallery
+# https://github.com/sachinchoolur/lightgallery.js
+lightgallery: true
 
 ```
 

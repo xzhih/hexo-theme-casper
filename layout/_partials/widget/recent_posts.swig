@@ -1,6 +1,6 @@
 {# 插件 - 最近文章 #}
 {% if site.posts.length %}
-  <article class="read-next-card" {% if theme.cover_image %} style="background-image: url({{ theme.cover_image }})" {% endif %} >
+  <article class="read-next-card" {% if theme.header_image %} style="background-image: url({{ theme.header_image }})" {% endif %} >
     <header class="read-next-card-header">
       <small class="read-next-card-header-sitetitle">&mdash; {{ config.title }} &mdash;</small>
       <h3 class="read-next-card-header-title">{{ __('recent_posts') }}</h3>
