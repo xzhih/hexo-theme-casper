@@ -14,6 +14,7 @@
 </footer>
 {% if is_post() %}
 {% include "public/fload-header.swig" %}
+{{ js('js/script') }}
 {% if theme.lightgallery %}
 {{ css('css/lightgallery.min') }}
 {{ js('js/lightgallery.min') }}

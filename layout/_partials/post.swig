@@ -2,7 +2,6 @@
 {% macro tpl() %}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
         <header class="post-full-header">
             <section class="post-full-meta">
                 <time  class="post-full-meta-date" datetime="{{ date_xml(page.date) }}" itemprop="datePublished">
@@ -17,16 +16,13 @@
             </section>
             <h1 class="post-full-title">{{ page.title }}</h1>
         </header>
-
-        <article class="post-full {% if not page.feature_img %} no-image {% endif %}">
-
+        <article class="post-full {% if not page.feature_img %}no-image{% endif %}">
             {% if page.feature_img %}
             <figure class="post-full-image" style="background-image: url({{ page.feature_img }})">
             </figure>
             {% endif %}
-
             <section class="post-full-content">
-                <div id="lightgallery" class="kg-card-markdown">
+                <div id="lightgallery" class="markdown-body">
                     {{ page.content }}
                 </div>
             </section>
@@ -34,4 +30,7 @@
     </div>
     {% include 'public/pagination.swig' %}
 </main>
+{% if theme.post_toc %}
+{% include "public/toc.swig" %}
+{% endif %}
 {% endmacro %}

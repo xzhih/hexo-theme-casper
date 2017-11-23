@@ -27,9 +27,10 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - Customized favicon, logo, header image, author image
 - Social links ( now support FB, TT ) 
 - 3 widgets ( I think no need more )
-- Tag, Category
+- Tag, Category, TOC 
 - Pagination
-- ~~Syntax Highlighting~~
+- Syntax Highlighting ( use [highlight.js](https://highlightjs.org) github style )
+- Responsive Web Design
 
 ## Installation
 

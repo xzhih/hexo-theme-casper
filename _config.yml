@@ -2,7 +2,7 @@
 rss:            # link
 favicon:        # link
 blog_logo:      # link
-header_image: //demo.ghost.io/content/images/2017/07/blog-cover.jpg 
+# header_image: //demo.ghost.io/content/images/2017/07/blog-cover.jpg 
 
 # menu
 menu:
@@ -25,6 +25,9 @@ widgets:
   category: true
   tagcloud: true
   # This is a simple theme, I think 3 is enough.
+
+# post
+post_toc: true
 
 # gallery
 # https://github.com/sachinchoolur/lightgallery.js

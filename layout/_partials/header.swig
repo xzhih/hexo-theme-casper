@@ -1,7 +1,7 @@
 {# header 部分, 控制页面中显示头部图像、标题 #}
 {# 非文章页面 header 显示 cover_img #}
 {% if not is_post() %}
-<header class="site-header outer {% if theme.header_image %}" style="background-image: url({{ theme.header_image }}) {% else %} no-cover {% endif %} ">
+<header class="site-header outer {% if theme.header_image %}" style="background-image: url({{ theme.header_image }})"{% else %}no-cover"{% endif %}>
     <div class="inner">
         {# 非首页, 导航栏在顶部 #}
         {% if not is_home() %}
@@ -25,7 +25,7 @@
 </header>
 {% else %}
 {# 文章页只显示导航 #}
-<header class="site-header outer">
+<header class="site-header outer" style="z-index: 999">
     <div class="inner">
         {% include 'public/nav.swig' %}
     </div>
