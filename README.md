@@ -1,8 +1,9 @@
-
 hexo-theme-casper
 ===
 
 A new [Ghost's Casper theme](https://github.com/TryGhost/Casper) port to [Hexo](hexo.io).
+
+DEMO [here](https://xzhih.github.io/hexo-theme-casper/)
 
 This is a simple and beautiful hexo theme.
 
@@ -18,6 +19,8 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - [Copyright & License](#copyright--license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+![hexo-theme-casper.jpg](https://i.loli.net/2017/11/26/5a19dd5331bea.jpg)
 
 ## Features
 
