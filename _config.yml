@@ -1,8 +1,8 @@
 # config
 rss:            # link
-favicon:        # link
-blog_logo:      # link
-# header_image: //demo.ghost.io/content/images/2017/07/blog-cover.jpg 
+favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
+blog_logo: https://i.loli.net/2017/11/26/5a19c0b50432e.png
+header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
 
 # menu
 menu:

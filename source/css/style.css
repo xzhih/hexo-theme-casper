@@ -8,7 +8,8 @@ body,
     position: relative;
     width: 80%;
     max-width: 710px;
-    margin: 2rem auto;
+    margin: 6rem auto;
+    margin-bottom: 2rem;
     font-size: 1.3rem;
     color: #68757d;
     text-align: center;
@@ -86,7 +87,7 @@ body,
         width: 33.3%;
     }
     .pagination {
-        margin: 20px 0 0;
+        margin: 40px 0 20px;
         width: 100%;
     }
     .t-g-control {

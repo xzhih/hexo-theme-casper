@@ -35,7 +35,7 @@
 	{{ favicon_tag(theme.favicon) }}
 	{% endif %}
 	{{ css('css/screen.min') }}
-	{{ css('css/style.min') }} 
+	{{ css('css/style') }} 
 	{% if is_post() %}
 	{{ js('js/jquery') }}
 	{{ js('js/highlight.min') }}
