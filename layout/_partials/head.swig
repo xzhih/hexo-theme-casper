@@ -25,7 +25,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 	<meta name="theme-color" content="{{ theme.chromeNavColor }}">
-	<title>{% if title %}{{ title }} | {% endif %}{{ config.title }}</title>
+	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {{ config.subtitle }}</title>
 	<meta name="description" content="{{ config.subtitle }}" />
 	<meta name="generator" content="{{ config.title }}">
 	{% if theme.rss %}

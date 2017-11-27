@@ -8,7 +8,7 @@
 		</section>
 		<nav class="site-footer-nav">
 			<a href="//hexo.io/">{{ __('powered_by') }} Hexo</a>
-			<a href="//github.com/xzhih/">Theme Casper</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper">Theme Casper</a>
 		</nav>
 	</div>
 </footer>

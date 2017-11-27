@@ -15,8 +15,10 @@ author_image:   # link
 
 # Social Links
 social:
-  facebook: https://www.facebook.com
+  weibo: https://weibo.com
+  github: https://github.com
   twitter: https://www.twitter.com
+  facebook: https://www.facebook.com
   # You only can use that I have added, I will keep adding
 
 # widget

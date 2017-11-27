@@ -56,6 +56,15 @@ cd themes/casper
 git pull
 ```
 
+**Front-matter**
+
+Add to `scaffolds/post.md`, 
+
+```
+cover_img:     # show in home page, the post card header
+feature_img:   # show in post page, content header
+```
+
 ## Configuration
 
 Edit `themes/hexo-casper/_config.yml` and set up what you want to show
