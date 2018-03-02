@@ -6,10 +6,10 @@ body,
 
 .site-footer-nav {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .pagination {
@@ -181,7 +181,8 @@ body,
 
 .post-toc>ol, 
 .post-toc>ul, 
-.post-toc>li {
+.post-toc>li,
+.toc-child {
     list-style: none;
 }
 
