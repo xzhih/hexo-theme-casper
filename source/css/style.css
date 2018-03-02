@@ -6,10 +6,10 @@ body,
 
 .site-footer-nav {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .pagination {
@@ -129,6 +129,8 @@ body,
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; 
     font-size: 1.7rem;
 }
 
