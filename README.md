@@ -1,13 +1,15 @@
 hexo-theme-casper
 ===
 
-A new [Ghost's Casper theme](https://github.com/TryGhost/Casper) port to [Hexo](hexo.io).
+A new [Ghost's Casper theme](https://github.com/TryGhost/Casper) port to [Hexo](https://hexo.io).
 
 DEMO [here](https://xzhih.github.io/hexo-theme-casper/)
 
 This is a simple and beautiful hexo theme.
 
 When I was searching `beautiful hexo themes`, I saw the old version of Casper port to Hexo, but the latest not. So I decided that I would port it.
+
+[中文版安装说明](https://zhih.me/2017/hexo-casper-usage/)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
