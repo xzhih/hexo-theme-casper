@@ -36,6 +36,7 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - Pagination
 - Syntax Highlighting ( use [highlight.js](https://highlightjs.org) github style )
 - Responsive Web Design
+- valine comment
 
 ## Installation
 
@@ -66,6 +67,10 @@ Add to `scaffolds/post.md`,
 cover_img:     # show in home page, the post card header
 feature_img:   # show in post page, content header
 ```
+
+**valine comment**
+
+[https://valine.js.org](https://valine.js.org)
 
 ## Configuration
 
@@ -104,6 +109,17 @@ widgets:
 # https://github.com/sachinchoolur/lightgallery.js
 lightgallery: true
 
+#comment
+# https://valine.js.org
+comment: false
+valine:
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki 
+  verify: false # Verification code
+  appId: # your leancloud application appid
+  appKey: # your leancloud application appkey
+  placeholder: Just go go # comment box placeholder
+  avatar: mm # gravatar style
+  pageSize: 10 # pagination size
 ```
 
 ## [Copyright & License](https://github.com/TryGhost/Casper/blob/master/LICENSE)

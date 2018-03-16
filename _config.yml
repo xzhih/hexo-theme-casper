@@ -40,7 +40,7 @@ widgets:
 lightgallery: true
 
 # https://valine.js.org
-comment: FA
+comment: false
 valine:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki 
   verify: false # Verification code
