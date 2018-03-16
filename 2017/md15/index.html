@@ -26,6 +26,10 @@
 	<script src="/hexo-theme-casper/js/jquery.js"></script>
 	<script src="/hexo-theme-casper/js/highlight.min.js"></script>
 	
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js '></script>
+	
+	
 </head>
 <body class="post-template">
     <div class="site-wrapper">
@@ -150,18 +154,23 @@
 <nav class="pagination">
     
     
-    <a class="prev-post" href="/hexo-theme-casper/2017/Annabel Lee/">
-        ← Annabel Lee
+    <a class="prev-post" href="/hexo-theme-casper/2017/md88/">
+        ← I Have a Dream
     </a>
     
     <span class="prev-next-post">•</span>
     
-    <a class="next-post" href="/hexo-theme-casper/2017/md88/">
+    <a class="next-post" href="/hexo-theme-casper/2017/md12/">
         I Have a Dream →
     </a>
     
     
 </nav>
+    
+    <div class="inner">
+        <div id="comment"></div>
+    </div>
+    
 </main>
 
 <div class="t-g-control">
@@ -338,6 +347,21 @@
 		$('#lightgallery').lightGallery({selector: '.post-img'});
 	});
 </script>
+
+<script>
+	new Valine({
+		el: '#comment' ,
+		verify: false,
+		notify: false,
+		appId: '',
+		appKey: '',
+		placeholder: 'Just go go',
+		pageSize: 10,
+		avatar:'mm',
+	});
+</script>
+
+
 
 
     </div>

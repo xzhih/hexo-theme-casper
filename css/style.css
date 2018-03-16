@@ -1,15 +1,15 @@
 body,
 .post-card-excerpt,
 .post-full-content {
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
 }
 
 .site-footer-nav {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .pagination {
@@ -82,7 +82,7 @@ body,
     border-color: #98a0a4;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .page-nav>.prev,
     .page-nav>.next,
     .prev-post,
@@ -116,11 +116,42 @@ body,
     }
 }
 
+@media (min-width: 1170px) {
+    #comment {
+        padding: 20px 100px 0;
+    }
+}
+
+.v .vinput,
+.v .vbtn,
+.v .vwrap .vcontrol .col,
+.v .vlist .vcard .vhead .vname,
+.v .vlist .vcard .vcontent {
+    font-size: unset!important;
+}
+
+.v .vbtn,
+.v .vwrap .vcontrol .col,
+.v .vlist .vcard .vcontent a {
+    font-size: 1.3rem!important;
+}
+
+.v .vinfo .col,
+.v .vinfo .vcount .vnum {
+    font-size: 1.5rem!important;
+}
+
+.v .vlist .vcard section .vfooter .vtime,
+.v .vlist .vcard section .vfooter .vat {
+    font-size: 1.2rem!important;
+}
+
+
 .floating-header {
     height: 2px;
 }
 
-.read-next-card-content-ext{
+.read-next-card-content-ext {
     position: relative;
     z-index: 50;
     -ms-flex-positive: 1;
@@ -129,6 +160,8 @@ body,
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     font-size: 1.7rem;
 }
 
@@ -137,7 +170,7 @@ body,
     padding: 10px;
 }
 
-.t-g-control{
+.t-g-control {
     z-index: 666;
     position: fixed;
     right: 0px;
@@ -160,8 +193,8 @@ body,
     height: 40px;
     padding: 4px;
     margin: 0 10px 10px 0;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
 }
 
 .gotop:hover,
@@ -179,9 +212,10 @@ body,
     z-index: 665;
 }
 
-.post-toc>ol, 
-.post-toc>ul, 
-.post-toc>li {
+.post-toc>ol,
+.post-toc>ul,
+.post-toc>li,
+.toc-child {
     list-style: none;
 }
 
@@ -189,10 +223,10 @@ body,
     position: relative;
     top: 0px;
     height: 100%;
-    background: hsla(0,0%,100%,.95);
+    background: hsla(0, 0%, 100%, .95);
     min-width: 300px;
     padding: 100px 40px;
-    border-left: 1px solid rgba(0,0,0,.06);
+    border-left: 1px solid rgba(0, 0, 0, .06);
 }
 
 .toc {
@@ -204,7 +238,7 @@ body,
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.5;
     word-wrap: break-word;
-    font-size: 20px;
+    font-size: 0.9em;
 }
 
 .markdown-body::before {
@@ -309,30 +343,30 @@ body,
 
 .markdown-body h1 {
     padding-bottom: 0.3em;
-    font-size: 2em;
+    font-size: 1.8em;
     border-bottom: 1px solid #eaecef
 }
 
 .markdown-body h2 {
     padding-bottom: 0.3em;
-    font-size: 1.5em;
+    font-size: 1.3em;
     border-bottom: 1px solid #eaecef
 }
 
 .markdown-body h3 {
-    font-size: 1.25em
+    font-size: 1.15em
 }
 
 .markdown-body h4 {
-    font-size: 1em
+    font-size: 0.95em
 }
 
 .markdown-body h5 {
-    font-size: 0.875em
+    font-size: 0.85em
 }
 
 .markdown-body h6 {
-    font-size: 0.85em;
+    font-size: 0.825em;
     color: #6a737d
 }
 
@@ -564,7 +598,7 @@ body,
 }
 
 .markdown-body .highlight tr,
-.markdown-body .highlight td{
+.markdown-body .highlight td {
     border: none;
     padding: 0;
     display: block;
@@ -645,23 +679,23 @@ hue-6-2: #c18401
 */
 
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #383a42;
-  background: #fafafa;
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #383a42;
+    background: #fafafa;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #a0a1a7;
-  font-style: italic;
+    color: #a0a1a7;
+    font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: #a626a4;
+    color: #a626a4;
 }
 
 .hljs-section,
@@ -669,11 +703,11 @@ hue-6-2: #c18401
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e45649;
+    color: #e45649;
 }
 
 .hljs-literal {
-  color: #0184bb;
+    color: #0184bb;
 }
 
 .hljs-string,
@@ -681,12 +715,12 @@ hue-6-2: #c18401
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #50a14f;
+    color: #50a14f;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #c18401;
+    color: #c18401;
 }
 
 .hljs-attr,
@@ -697,7 +731,7 @@ hue-6-2: #c18401
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: #986801;
+    color: #986801;
 }
 
 .hljs-symbol,
@@ -706,17 +740,17 @@ hue-6-2: #c18401
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #4078f2;
+    color: #4078f2;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+    font-style: italic;
 }
 
 .hljs-strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .hljs-link {
-  text-decoration: underline;
+    text-decoration: underline;
 }
