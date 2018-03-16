@@ -32,5 +32,20 @@
 		$('#lightgallery').lightGallery({selector: '.post-img'});
 	});
 </script>
+{% if theme.comment %}
+<script>
+	new Valine({
+		el: '#comment' ,
+		verify: {{ theme.valine.verify }},
+		notify: {{ theme.valine.notify }},
+		appId: '{{ theme.valine.appId }}',
+		appKey: '{{ theme.valine.appKey }}',
+		placeholder: '{{ theme.valine.placeholder }}',
+		pageSize: {{ theme.valine.pageSize }},
+		avatar:'{{ theme.valine.avatar }}',
+	});
+</script>
+{% endif %}
+
 {% endif %}
 {% endif %}

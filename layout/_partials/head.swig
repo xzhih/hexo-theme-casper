@@ -39,5 +39,9 @@
 	{% if is_post() %}
 	{{ js('js/jquery') }}
 	{{ js('js/highlight.min') }}
+	{% if theme.comment %}
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js '></script>
+	{% endif %}
 	{% endif %}
 </head>

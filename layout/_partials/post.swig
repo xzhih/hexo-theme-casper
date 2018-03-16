@@ -29,6 +29,11 @@
         </article>
     </div>
     {% include 'public/pagination.swig' %}
+    {% if theme.comment %}
+    <div class="inner">
+        <div id="comment"></div>
+    </div>
+    {% endif %}
 </main>
 {% if theme.post_toc %}
 {% include "public/toc.swig" %}
