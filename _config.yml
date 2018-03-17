@@ -39,6 +39,7 @@ widgets:
 # https://github.com/sachinchoolur/lightgallery.js
 lightgallery: true
 
+# comment
 # https://valine.js.org
 comment: false
 valine:
@@ -47,5 +48,14 @@ valine:
   appId: # your leancloud application appid
   appKey: # your leancloud application appkey
   placeholder: Just go go # comment box placeholder
-  avatar: mm # gravatar style
   pageSize: 10 # pagination size
+  avatar: mm # gravatar style
+
+chromeNavColor: 3c484e
+
+# Baidu Push
+baidu: false
+
+# Google Analytics
+googleAnalytics: false
+GA_TRACKING_ID: UA-XXXXXXXXXX-1

@@ -37,6 +37,9 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - Syntax Highlighting ( use [highlight.js](https://highlightjs.org) github style )
 - Responsive Web Design
 - valine comment
+- chrome Nav Color
+- Baidu Push
+- Google Analytics
 
 ## Installation
 
@@ -109,7 +112,7 @@ widgets:
 # https://github.com/sachinchoolur/lightgallery.js
 lightgallery: true
 
-#comment
+# comment
 # https://valine.js.org
 comment: false
 valine:
@@ -118,8 +121,17 @@ valine:
   appId: # your leancloud application appid
   appKey: # your leancloud application appkey
   placeholder: Just go go # comment box placeholder
-  avatar: mm # gravatar style
   pageSize: 10 # pagination size
+  avatar: mm # gravatar style
+
+chromeNavColor: 3c484e
+
+# Baidu Push
+baidu: false
+
+# Google Analytics
+googleAnalytics: false
+GA_TRACKING_ID: UA-XXXXXXXXXX-1
 ```
 
 ## [Copyright & License](https://github.com/TryGhost/Casper/blob/master/LICENSE)

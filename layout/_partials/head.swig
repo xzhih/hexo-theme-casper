@@ -20,12 +20,24 @@
 {% set body_class = 'post-template' %}
 {% endif %}
 <head>
+	{% if theme.googleAnalytics %}
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{{ theme.GA_TRACKING_ID }}');
+	</script>
+	{% endif %}
 	<meta charset="UTF-8"/>
 	<meta name="HandheldFriendly" content="True" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<meta name="theme-color" content="{{ theme.chromeNavColor }}">
-	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {{ config.subtitle }}</title>
+	{% if theme.chromeNavColor %}
+	<meta name="theme-color" content="#{{ theme.chromeNavColor }}">
+	{% endif %}
+	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
 	<meta name="description" content="{{ config.subtitle }}" />
 	<meta name="generator" content="{{ config.title }}">
 	{% if theme.rss %}
