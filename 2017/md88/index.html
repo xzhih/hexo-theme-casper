@@ -8,12 +8,15 @@
 
 
 <head>
+	
 	<meta charset="UTF-8"/>
 	<meta name="HandheldFriendly" content="True" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<meta name="theme-color" content="">
-	<title>I Have a Dream | DEMO-subtitle</title>
+	
+	<meta name="theme-color" content="#3c484e">
+	
+	<title>I Have a Dream | DEMO-Title</title>
 	<meta name="description" content="DEMO-subtitle" />
 	<meta name="generator" content="DEMO-Title">
 	
@@ -25,9 +28,6 @@
 	
 	<script src="/hexo-theme-casper/js/jquery.js"></script>
 	<script src="/hexo-theme-casper/js/highlight.min.js"></script>
-	
-	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js '></script>
 	
 	
 </head>
@@ -166,10 +166,6 @@
     
     
 </nav>
-    
-    <div class="inner">
-        <div id="comment"></div>
-    </div>
     
 </main>
 
@@ -325,6 +321,7 @@
 	</div>
 </footer>
 
+
 <div class="floating-header" >
     <progress class="progress" value="0">
         <div class="progress-container">
@@ -347,20 +344,6 @@
 		$('#lightgallery').lightGallery({selector: '.post-img'});
 	});
 </script>
-
-<script>
-	new Valine({
-		el: '#comment' ,
-		verify: false,
-		notify: false,
-		appId: '',
-		appKey: '',
-		placeholder: 'Just go go',
-		pageSize: 10,
-		avatar:'mm',
-	});
-</script>
-
 
 
 
