@@ -132,6 +132,9 @@ baidu: false
 # Google Analytics
 googleAnalytics: false
 GA_TRACKING_ID: UA-XXXXXXXXXX-1
+
+# MathJax support
+mathjax: false
 ```
 
 ## [Copyright & License](https://github.com/TryGhost/Casper/blob/master/LICENSE)
