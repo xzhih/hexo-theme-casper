@@ -63,3 +63,5 @@ GA_TRACKING_ID: UA-XXXXXXXXXX-1
 
 # MathJax support
 mathjax: false
+
+copyright_since: 2017
