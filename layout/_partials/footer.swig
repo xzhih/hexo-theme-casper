@@ -10,10 +10,10 @@
 			{% endif %}
 			{{ date(Date.now(), 'YYYY') }}
 		</section>
+		<section class="footer-text">
+			{{ theme.footer_text }}
+		</section>
 		<nav class="site-footer-nav">
-			{% for key,link in theme.footer %}
-				<a href="{{ link }}" >{{ key }}</a>
-			{% endfor %}
 			<a href="//hexo.io/">{{ __('powered_by') }} Hexo</a>
 			<a href="https://github.com/xzhih/hexo-theme-casper">Theme Casper</a>
 		</nav>

@@ -12,6 +12,10 @@ body,
     flex-wrap: wrap;
 }
 
+.footer-text {
+    text-align: center;
+}
+
 .pagination {
     position: relative;
     width: 80%;
