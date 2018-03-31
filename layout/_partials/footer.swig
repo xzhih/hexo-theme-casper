@@ -4,7 +4,11 @@
 	<div class="site-footer-content inner">
 		<section class="copyright">
 			<a href="{{ config.root }}">{{ config.title }}</a>
-			&copy; {{ theme.copyright_since }} - {{ date(Date.now(), 'YYYY') }}
+			&copy;
+			{% if theme.copyright_since %}
+			{{ theme.copyright_since }} -
+			{% endif %}
+			{{ date(Date.now(), 'YYYY') }}
 		</section>
 		<nav class="site-footer-nav">
 			{% for key,link in theme.footer %}
