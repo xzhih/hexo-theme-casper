@@ -1058,7 +1058,8 @@ body {
 
 .post-full-title {
     margin: 0;
-    color: #090a0b
+    color: #090a0b;
+    text-align: center
 }
 
 .date-divider {
