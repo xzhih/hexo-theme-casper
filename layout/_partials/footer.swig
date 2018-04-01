@@ -4,16 +4,12 @@
 	<div class="site-footer-content inner">
 		<section class="copyright">
 			<a href="{{ config.root }}">{{ config.title }}</a>
-			&copy;
-			{% if theme.copyright_since %}
-			{{ theme.copyright_since }} -
-			{% endif %}
-			{{ date(Date.now(), 'YYYY') }}
-		</section>
-		<section class="footer-text">
-			{{ theme.footer_text }}
+			&copy; {{ date(Date.now(), 'YYYY') }}
 		</section>
 		<nav class="site-footer-nav">
+			{% for key,link in theme.footer %}
+				<a href="{{ link }}" >{{ key }}</a>
+			{% endfor %}
 			<a href="//hexo.io/">{{ __('powered_by') }} Hexo</a>
 			<a href="https://github.com/xzhih/hexo-theme-casper">Theme Casper</a>
 		</nav>
