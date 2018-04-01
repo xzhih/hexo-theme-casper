@@ -97,8 +97,11 @@ author_image:   # link
 
 # Social Links
 social:
-  facebook: https://www.facebook.com
-  twitter: https://www.twitter.com
+  weibo: 
+  github:
+  twitter: 
+  facebook: 
+  telegram:
   # You only can use that I have added, I will keep adding
 
 # widget
@@ -133,5 +136,9 @@ baidu: false
 googleAnalytics: false
 GA_TRACKING_ID: UA-XXXXXXXXXX-1
 ```
+
+## Contributor
+
+[batkiz](https://github.com/xzhih/hexo-theme-casper/commits?author=batkiz)
 
 ## [Copyright & License](https://github.com/TryGhost/Casper/blob/master/LICENSE)
