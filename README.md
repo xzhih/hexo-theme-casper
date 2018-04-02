@@ -46,7 +46,7 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 **Install**
 
 ```
-git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper
+$ git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper
 ```
 
 **Enable**
@@ -58,8 +58,8 @@ Modify `theme` in `_config.yml` to `hexo-casper` .
 You'd better backup old file first.
 
 ```
-cd themes/casper 
-git pull
+$ cd themes/casper 
+$ git pull
 ```
 
 **Front-matter**
@@ -135,6 +135,12 @@ baidu: false
 # Google Analytics
 googleAnalytics: false
 GA_TRACKING_ID: UA-XXXXXXXXXX-1
+```
+
+**PS: Add about page**
+
+```
+$ hexo new page about
 ```
 
 ## Contributor

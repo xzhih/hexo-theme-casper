@@ -18,6 +18,8 @@
 {% set body_class = 'home-template' %}
 {% elseif is_post() %}
 {% set body_class = 'post-template' %}
+{% elseif is_page %}
+{% set body_class = 'page-template' %}
 {% endif %}
 <head>
 	{% if theme.googleAnalytics %}
@@ -46,8 +48,9 @@
 	{% if theme.favicon and theme.favicon.length %}
 	{{ favicon_tag(theme.favicon) }}
 	{% endif %}
-	{{ css('css/screen.min') }}
-	{{ css('css/style.min') }} 
+	{# {{ css('css/screen') }} #}
+	{# {{ css('css/style') }} #}
+	{{ css('css/allinone.min') }} 
 	{% if is_post() %}
 	{{ js('js/jquery') }}
 	{{ js('js/highlight.min') }}
