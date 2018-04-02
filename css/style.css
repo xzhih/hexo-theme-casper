@@ -220,6 +220,7 @@ body,
 }
 
 .post-toc {
+    overflow: scroll;
     position: relative;
     top: 0px;
     height: 100%;
@@ -230,8 +231,7 @@ body,
 }
 
 .toc {
-    padding: 0;
-    overflow: scroll;
+    padding-bottom: 10px;
 }
 
 .markdown-body {
