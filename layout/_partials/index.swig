@@ -14,7 +14,7 @@
 					<a class="post-card-content-link" href="{{ url_for(post.path) }}">
 						<header class="post-card-header">
 							<span class="post-card-tags">
-								{% if post.categories and post.categories.length %}
+								{% if post.categories %}
 								{% for cate in post.categories %}
 								{{ cate.name }}
 								{% endfor %}| 

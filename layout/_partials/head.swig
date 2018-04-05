@@ -42,18 +42,31 @@
 	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
 	<meta name="description" content="{{ config.subtitle }}" />
 	<meta name="generator" content="{{ config.title }}">
+
 	{% if theme.rss %}
 	{{ feed_tag(theme.rss, [{title:config.title}])  }}
 	{% endif %}
-	{% if theme.favicon and theme.favicon.length %}
+
+	{% if theme.favicon %}
 	{{ favicon_tag(theme.favicon) }}
 	{% endif %}
 	{# {{ css('css/screen') }} #}
 	{# {{ css('css/style') }} #}
 	{{ css('css/allinone.min') }} 
+
 	{% if is_post() %}
+	{% if theme.CDN.jquery %}
+	<script src="{{ theme.CDN.jquery }}"></script>
+	{% else %}
 	{{ js('js/jquery') }}
+	{% endif %}
+
+	{% if theme.CDN.highlightjs %}
+	<script src="{{ theme.CDN.highlightjs }}"></script>
+	{% else %}
 	{{ js('js/highlight.min') }}
+	{% endif %}
+
 	{% if theme.comment %}
 	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js '></script>

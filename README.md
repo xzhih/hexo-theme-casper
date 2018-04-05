@@ -135,6 +135,15 @@ baidu: false
 # Google Analytics
 googleAnalytics: false
 GA_TRACKING_ID: UA-XXXXXXXXXX-1
+
+# Your Own CDN Links
+# if you don't need the default cdn links, just delete, this theme will get files from source  
+CDN: 
+  jquery: https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js
+  highlightjs: https://cdn.staticfile.org/highlight.js/9.10.0/highlight.min.js
+  lightgalleryjs: https://cdn.staticfile.org/lightgallery/1.3.9/js/lightgallery.min.js
+  lightgallerycss: https://cdn.staticfile.org/lightgallery/1.3.9/css/lightgallery.min.css
+
 ```
 
 **PS: Add about page**

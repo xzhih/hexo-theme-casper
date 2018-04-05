@@ -125,11 +125,24 @@
         $('td.code').each(function(i, block) {
             hljs.highlightBlock(block);
         });
+
+        console.log("this theme is from https://github.com/xzhih/hexo-theme-casper")
     });
 </script>
 {% if theme.lightgallery %}
+
+{% if theme.CDN.lightgallerycss %}
+<link rel="stylesheet" href="{{ theme.CDN.lightgallerycss }}">
+{% else %}
 {{ css('css/lightgallery.min') }}
+{% endif %}
+
+{% if theme.CDN.lightgalleryjs %}
+<script src="{{ theme.CDN.lightgalleryjs }}"></script>
+{% else %}
 {{ js('js/lightgallery.min') }}
+{% endif %}
+
 <script>
 	$(function () {
 		var postImg = $('#lightgallery').find('img');

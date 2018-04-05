@@ -7,7 +7,7 @@
                 <time  class="post-full-meta-date" datetime="{{ date_xml(page.date) }}" itemprop="datePublished">
                     {{ date(page.date, 'YYYY-MM-D') }}
                 </time>
-                {% if page.categories and page.categories.length %}
+                {% if page.categories %}
                 <span class="date-divider">/</span>
                 {% for cate in page.categories %}
                 <a href="{{ url_for(cate.path) }}">{{ cate.name }}</a>&nbsp;&nbsp;
