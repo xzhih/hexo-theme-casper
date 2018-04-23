@@ -19,16 +19,25 @@
 	<title>Hexo-Theme-Casper | DEMO-Title</title>
 	<meta name="description" content="DEMO-subtitle" />
 	<meta name="generator" content="DEMO-Title">
+
 	
+
 	
 	<link rel="shortcut icon" href="https://i.loli.net/2017/11/26/5a19c0b50432e.png">
 	
 	
 	
 	<link rel="stylesheet" href="/hexo-theme-casper/css/allinone.min.css"> 
+
 	
-	<script src="/hexo-theme-casper/js/jquery.js"></script>
-	<script src="/hexo-theme-casper/js/highlight.min.js"></script>
+	
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+
+	
+	<script src="https://cdn.staticfile.org/highlight.js/9.10.0/highlight.min.js"></script>
+	
+
 	
 	
 </head>
@@ -449,11 +458,20 @@ lightgallery: true
         $('td.code').each(function(i, block) {
             hljs.highlightBlock(block);
         });
+
+        console.log("this theme is from https://github.com/xzhih/hexo-theme-casper")
     });
 </script>
 
-<link rel="stylesheet" href="/hexo-theme-casper/css/lightgallery.min.css">
-<script src="/hexo-theme-casper/js/lightgallery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/1.3.9/css/lightgallery.min.css">
+
+
+
+<script src="https://cdn.staticfile.org/lightgallery/1.3.9/js/lightgallery.min.js"></script>
+
+
 <script>
 	$(function () {
 		var postImg = $('#lightgallery').find('img');
