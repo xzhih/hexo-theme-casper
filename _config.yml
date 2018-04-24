@@ -3,7 +3,11 @@ rss:            # link
 favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
 blog_logo: 
 header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
+sec_title: This is a demo
 post_toc: true
+
+# keywords
+keywords: hexo, casper, ghost, theme
 
 # menu
 menu:
