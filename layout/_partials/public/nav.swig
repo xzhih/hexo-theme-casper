@@ -5,7 +5,7 @@
             <li>
                 {% if theme.blog_logo %}
                 {% if not is_home() %}
-                <a class="site-nav-logo" href="{{ config.root }}"  title="Home">
+                <a class="site-nav-logo" href="{{ config.root }}"  title="{{ config.title }}">
                     <img src="{{ theme.blog_logo }}" alt="{{ config.title }}" />
                 </a>
                 {% endif %}

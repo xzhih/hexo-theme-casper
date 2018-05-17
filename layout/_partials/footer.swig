@@ -3,38 +3,47 @@
 <footer class="site-footer outer">
 	<div class="site-footer-content inner">
 		<section class="copyright">
-			<a href="{{ config.root }}">{{ config.title }}</a>
+			<a href="{{ config.root }}" title="{{ config.title }}">{{ config.title }}</a>
 			&copy; {{ date(Date.now(), 'YYYY') }}
 		</section>
 		<nav class="site-footer-nav">
 			{% for key,link in theme.footer %}
-				<a href="{{ link }}" >{{ key }}</a>
-			{% endfor %}
-			<a href="//hexo.io/">{{ __('powered_by') }} Hexo</a>
-			<a href="https://github.com/xzhih/hexo-theme-casper">Casper</a>
-		</nav>
-	</div>
+            <a href="{{ link }}" title="{{ key }}" target="_blank" rel="noopener">{{ key }}</a>
+            {% endfor %}
+            {{ link_to('https://hexo.io', 'Hexo', {external: true})}}
+            {{ link_to('https://github.com/xzhih/hexo-theme-casper', 'Casper', {external: true})}}
+        </nav>
+    </div>
 </footer>
+
 {% if theme.baidu %}
 <script>
-	(function(){
-		var bp = document.createElement('script');
-		var curProtocol = window.location.protocol.split(':')[0];
-		if (curProtocol === 'https') {
-			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-		}
-		else {
-			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-		}
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(bp, s);
-	})();
+   (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+     }
+     else {
+         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+     }
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(bp, s);
+ })();
 </script>
 {% endif %}
+
+{% if not is_post() %}
+<script>
+    {% include "public/lazyload.js" %}
+    ;(function() {var bLazy = new Blazy();})();
+</script>
+{% endif %}
+
 {% if is_post() %}
 {% include "public/fload-header.swig" %}
 <script>
-	$(document).ready(function () {
+   $(document).ready(function () {
     var progressBar = document.querySelector('progress');
     var header = document.querySelector('.floating-header');
     var title = document.querySelector('.post-full-title');
@@ -45,11 +54,6 @@
 
     function onScroll() {
         lastScrollY = window.scrollY;
-        requestTick();
-    }
-    function onResize() {
-        lastWindowHeight = window.innerHeight;
-        lastDocumentHeight = $(document).height();
         requestTick();
     }
     function requestTick() {
@@ -73,8 +77,8 @@
             progressBar.setAttribute('value', lastScrollY);
             ticking = false;
         }
+
         window.addEventListener('scroll', onScroll, {passive: true});
-        window.addEventListener('resize', onResize, false);
         update();
 
         // TOC
@@ -154,6 +158,7 @@
 		$('#lightgallery').lightGallery({selector: '.post-img'});
 	});
 </script>
+
 {% if theme.comment %}
 <script>
 	new Valine({

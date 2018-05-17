@@ -1,19 +1,18 @@
 {# header 部分, 控制页面中显示头部图像、标题 #}
 {# 非文章页面 header 显示 cover_img #}
 {% if not is_post() %}
-<header class="site-header outer {% if theme.header_image %}" style="background-image: url({{ theme.header_image }})"{% else %}no-cover"{% endif %}>
+<header class="site-header outer {% if theme.header_image %} b-lazy" data-src="{{ theme.header_image }}"{% else %}no-cover"{% endif %}>
     <div class="inner">
         {# 非首页, 导航栏在顶部 #}
         {% if not is_home() %}
         {% include 'public/nav.swig' %}
         {% endif %}
         <div class="site-header-content">
+            {% if is_home() and theme.blog_logo %}
+            <img class="author-profile-image" src="{{ theme.blog_logo }}" alt="{{ title }}" />
+            {% endif %}
             <h1 class="site-title">
-                {% if is_home() and theme.blog_logo %}
-                <img class="site-logo" src="{{ theme.blog_logo }}" alt="{{ title }}" />
-                {% else %}
                 {{ title }}
-                {% endif %}
             </h1>
             <h2 class="site-description">{{ description }}</h2>
         </div>

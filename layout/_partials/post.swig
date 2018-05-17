@@ -18,7 +18,7 @@
         </header>
         <article class="post-full {% if not page.feature_img %}no-image{% endif %}">
             {% if page.feature_img %}
-            <figure class="post-full-image" style="background-image: url({{ page.feature_img }})">
+            <figure class="post-full-image b-lazy" data-src="{{ page.feature_img }}">
             </figure>
             {% endif %}
             <section class="post-full-content">

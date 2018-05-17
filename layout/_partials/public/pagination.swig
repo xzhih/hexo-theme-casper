@@ -8,13 +8,13 @@
     {% endif %}
     {% else %}
     {% if page.prev %}
-    <a class="prev-post" href="{{ url_for(page.prev.path) }}">
+    <a class="prev-post" title="{{ page.prev.title }}" href="{{ url_for(page.prev.path) }}">
         ← {{ page.prev.title }}
     </a>
     {% endif %}
     <span class="prev-next-post">•</span>
     {% if page.next %}
-    <a class="next-post" href="{{ url_for(page.next.path) }}">
+    <a class="next-post" title="{{ page.next.title }}" href="{{ url_for(page.next.path) }}">
         {{ page.next.title }} →
     </a>
     {% endif %}

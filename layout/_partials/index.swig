@@ -6,12 +6,12 @@
 			{% for post in page.posts %}
 			<article class="post-card post {% if not post.cover_img %} no-image {% endif %}">
 				{% if post.cover_img %}
-				<a class="post-card-image-link" href="{{ url_for(post.path) }}">
-					<div class="post-card-image" style="background-image: url({{ post.cover_img }})"></div>
+				<a class="post-card-image-link" title="{{ post.title }}" href="{{ url_for(post.path) }}">
+					<div class="post-card-image b-lazy" data-src="{{ post.cover_img }}"></div>
 				</a>
 				{% endif %}
 				<div class="post-card-content">
-					<a class="post-card-content-link" href="{{ url_for(post.path) }}">
+					<a class="post-card-content-link" title="{{ post.title }}" href="{{ url_for(post.path) }}">
 						<header class="post-card-header">
 							<span class="post-card-tags">
 								{% if post.categories %}
@@ -38,10 +38,24 @@
 						</section>
 					</a>
 					<footer class="post-card-meta">
-						{% if theme.author_image %}
-						<img class="author-profile-image" src="{{ theme.author_image }}" alt="{{ config.author }}" />
-						{% endif %}
-						<span class="post-card-author">{{ config.author }}</span>
+						<ul class="author-list">
+							<li class="author-list-item">
+								<div class="author-name-tooltip">{{ config.author }}</div>
+								{% if theme.author_image %}
+								<a href="/about" class="static-avatar">
+									<img class="author-profile-image" src="{{ theme.author_image }}" alt="{{ config.author }}" />
+								</a>
+								{% else %}
+								<a href="/about" class="static-avatar author-profile-image">
+									{% include "public/icons/avatar.svg" %}
+								</a>
+								{% endif %}
+							</li>
+						</ul>
+						<span class="reading-time">
+							{{ Math.round(strip_html(post.content).length/400) }}
+							 min read
+						</span>
 					</footer>
 				</div>
 			</article>

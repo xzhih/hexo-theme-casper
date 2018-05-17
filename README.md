@@ -40,6 +40,7 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - chrome Nav Color
 - Baidu Push
 - Google Analytics
+- SEO
 
 ## Installation
 
@@ -69,11 +70,20 @@ Add to `scaffolds/post.md`,
 ```
 cover_img:     # show in home page, the post card header
 feature_img:   # show in post page, content header
+description: 
+keywords: 
 ```
 
 **valine comment**
 
 [https://valine.js.org](https://valine.js.org)
+
+**PS: Add about page**
+
+```
+$ hexo new page about
+```
+
 
 ## Configuration
 
@@ -82,9 +92,14 @@ Edit `themes/hexo-casper/_config.yml` and set up what you want to show
 ```yaml
 # config
 rss:            # link
-favicon:        # link
-blog_logo:      # link
-header_image: //demo.ghost.io/content/images/2017/07/blog-cover.jpg 
+favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
+blog_logo: 
+header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
+bio: This is a demo
+post_toc: true
+
+# keywords
+keywords: hexo, casper, ghost, theme
 
 # menu
 menu:
@@ -94,15 +109,23 @@ menu:
 
 # author
 author_image:   # link
+author_bio: 
+author_location: 
 
 # Social Links
 social:
-  weibo: 
-  github:
-  twitter: 
-  facebook: 
+  weibo: https://weibo.com/xzhih
+  github: https://github.com/xzhih
+  twitter: https://twitter.com
+  facebook: https://facebook
   telegram:
   # You only can use that I have added, I will keep adding
+
+# Footer Links
+footer_text: 
+  # title: link
+  # 粤ICP备xxxxxxx号-x: http://www.miitbeian.gov.cn
+  # 粤公网安备xxxxxxx号: http://www.beian.gov.cn
 
 # widget
 widgets:
@@ -127,7 +150,11 @@ valine:
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
 
-chromeNavColor: 3c484e
+# PWA
+# you need create a manifest.json file in hexo's source folder
+manifest: false
+
+navColor: '3c484e'
 
 # Baidu Push
 baidu: false
@@ -144,12 +171,6 @@ CDN:
   lightgalleryjs: https://cdn.staticfile.org/lightgallery/1.3.9/js/lightgallery.min.js
   lightgallerycss: https://cdn.staticfile.org/lightgallery/1.3.9/css/lightgallery.min.css
 
-```
-
-**PS: Add about page**
-
-```
-$ hexo new page about
 ```
 
 ## Contributor
