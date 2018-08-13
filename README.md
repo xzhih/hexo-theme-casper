@@ -9,7 +9,7 @@ This is a simple and beautiful hexo theme.
 
 When I was searching `beautiful hexo themes`, I saw the old version of Casper port to Hexo, but the latest not. So I decided that I would port it.
 
-[中文版安装说明](https://zhih.me/2017/hexo-casper-usage/)
+[中文版安装说明](https://zhih.me/hexo-casper-usage/)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
