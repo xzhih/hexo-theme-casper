@@ -2,7 +2,7 @@
 * @Author: xzhih
 * @Date:   2018-10-28 22:17:29
 * @Last Modified by:   xzhih
-* @Last Modified time: 2018-10-29 03:47:24
+* @Last Modified time: 2018-10-30 03:17:21
 */
 
 // hexo.log.warn()
@@ -82,10 +82,11 @@ hexo.extend.filter.register('after_generate', () => {
 				postImg.addClass('post-img')
 				postImg.each(function () {
 					var imgSrc = $(this).attr('src');
-					$(this).attr('data-src', imgSrc)
+					$(this).attr('href', imgSrc)
+					
 					if (hexo.theme.config.lazyload) {
+						$(this).attr('data-src', imgSrc)
 						$(this).addClass('b-lazy');
-						$(this).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==')
 					}
 				})
 				resolve({ path, html: $.html() });

@@ -5,6 +5,8 @@ A new [Ghost's Casper theme](https://github.com/TryGhost/Casper) port to [Hexo](
 
 DEMO [here](https://xzhih.github.io/hexo-theme-casper/)
 
+My Blog [zhih.me](https://zhih.me/)
+
 This is a simple and beautiful hexo theme.
 
 When I was searching `beautiful hexo themes`, I saw the old version of Casper port to Hexo, but the latest not. So I decided that I would port it.
@@ -76,7 +78,7 @@ description:
 keywords: 
 ```
 
-**valine comment**
+**Valine comment**
 
 [https://valine.js.org](https://valine.js.org)
 
@@ -188,6 +190,7 @@ CDN:
 ### Local Search
 
 https://github.com/wzpan/hexo-generator-search 
+
 https://github.com/SuperKieran/hexo-generator-search-zip
 
 ## [Copyright & License](https://github.com/TryGhost/Casper/blob/master/LICENSE)

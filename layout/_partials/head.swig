@@ -20,9 +20,9 @@
 {% set body_class = 'post-template' %}
 {% endif %}
 <head>
-	{{ css('css/screen') }}
-	{{ css('css/style') }}
-	{# {{ css('css/allinone.min') }}  #}
+	{# {{ css('css/screen') }} #}
+	{# {{ css('css/style') }} #}
+	{{ css('css/allinone.min') }} 
 
 	{% if theme.googleAnalytics %}
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->

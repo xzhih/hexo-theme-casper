@@ -11,6 +11,24 @@ img {
 	image-rendering: -webkit-optimize-contrast;
 }
 
+.post-img {
+	width: 100%;
+	min-height: 100px;
+	background: #C5D2D9 no-repeat 50%!important;
+	background-size: cover;
+	border-radius: 4px;
+}
+
+.b-lazy {
+	-webkit-transition: opacity 500ms ease-in-out;
+	transition: opacity 500ms ease-in-out;
+	opacity: .5;
+}
+
+.b-lazy.b-loaded {
+	opacity: 1;
+}
+
 .post-full-content h5 {
 	font-family: inherit;
 
@@ -666,8 +684,6 @@ img {
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	max-width: 100%;
-
-	background-color: #FFFFFF;
 }
 
 .markdown-body img[align=right] {

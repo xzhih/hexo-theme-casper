@@ -151,13 +151,9 @@
 
 <script>
     $(function () {
-        // var postImg = $('#lightgallery').find('img');
-        // postImg.addClass('post-img');
-        // postImg.each(function () {
-        //     var imgSrc = $(this).attr('src');
-        //     $(this).attr('data-src', imgSrc);
-        // });
-        $('#lightgallery').lightGallery({selector: '.post-img'});
+        $('#lightgallery').lightGallery({
+            selector: '.post-img'
+        });
     });
 </script>
 {% endif %}
@@ -182,45 +178,44 @@
 {% if theme.local_search %}
 <script type="text/javascript"> 
     // 保存搜索数据
-    var keepSearchData = function  () {
-        var xhr2 = new XMLHttpRequest();
-        xhr2.open("GET", "{{ config.root }}searchData.json", true);
-        xhr2.onreadystatechange = function () {
-            if(this.readyState == 4){
-                var res = this.responseText;
-                localStorage.setItem('searchData', res);
-            }
-        }
-        xhr2.send();
+    var keepSearchData = function () {
+        fetch('{{ config.root }}searchData.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(resData) {
+            localStorage.setItem('searchData', JSON.stringify(resData));
+        })
     }
 
     // 检查和获取搜索数据
     var checkAndGetData = function () {
-        var xhr1 = new XMLHttpRequest();
-        xhr1.open("GET", "{{ config.root }}searchVersion.txt?t=" + (+new Date()), true);
-        xhr1.onreadystatechange = function () {
-            if(this.readyState == 4){
-                var res = this.responseText;
-                if (localStorage.getItem('searchVersion') !== res) {
-                    localStorage.setItem('searchVersion', res);
-                    keepSearchData()
-                }
+        fetch('{{ config.root }}searchVersion.txt?t=' + (+new Date()))
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(resVersion) {
+            if (localStorage.getItem('searchVersion') !== resVersion) {
+                localStorage.setItem('searchVersion', resVersion);
+                keepSearchData()
             }
-        }
-        xhr1.send();
+        })
+        searchFunc("local-search-input", "local-search-result");
     }
 
-    checkAndGetData()
-
-    // 输入并搜索
+    // 监听搜索
     var searchFunc = function(search_id, content_id) {
-        "use strict";
+        'use strict'
         var localSearchData = localStorage.getItem("searchData");
         var datas = JSON.parse(localSearchData);
         var input = document.getElementById(search_id);
         if (!input) return;
         var resultContent = document.getElementById(content_id);
         input.addEventListener("input", function() {
+            if (typeof(localSearchData) !== 'string') {
+                localSearchData = localStorage.getItem("searchData");
+                datas = JSON.parse(localSearchData);
+            }
             var str = '<ul class="search-result-list">';
             var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
             resultContent.innerHTML = "";
@@ -286,7 +281,8 @@
             resultContent.innerHTML = str;
         });
     };
-    searchFunc("local-search-input", "local-search-result");
+
+    checkAndGetData()
 </script>
 
 {% endif %}
