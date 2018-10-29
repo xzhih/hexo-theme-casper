@@ -42,6 +42,16 @@
                     {% include "public/icons/telegram.svg" %}
                 </a>
                 {% endif %}
+                {% if theme.social.bilibili %}
+                <a class="social-link" title="bilibili" href="{{ theme.social.bilibili }}" target="_blank" rel="noopener">
+                    {% include "public/icons/bilibili.svg" %}
+                </a>
+                {% endif %}
+                {% if theme.social.youtube %}
+                <a class="social-link" title="youtube" href="{{ theme.social.youtube }}" target="_blank" rel="noopener">
+                    {% include "public/icons/youtube.svg" %}
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>

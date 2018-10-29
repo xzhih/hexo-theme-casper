@@ -3188,6 +3188,32 @@ body,
 	}
 }
 
+.post-full-content h5 {
+	font-family: inherit;
+
+	padding: unset;
+
+	text-align: left;
+}
+
+.post-full-content table {
+	white-space: unset;
+	word-break: keep-all;
+
+	background: unset;
+}
+
+.post-full-content table td:last-child,
+.post-full-content table td:first-child {
+	background-image: unset;
+}
+
+.post-full-content table th {
+	font-size: 1em;
+
+	text-align: center;
+}
+
 .site-footer-nav {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
@@ -3443,6 +3469,7 @@ body,
 }
 
 .markdown-body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: .9em;
 	line-height: 1.5;
 
@@ -3561,35 +3588,58 @@ body,
 }
 
 .markdown-body h1 {
-	font-size: 1.8em;
+	font-size: 1.9em;
+	line-height: 1.2;
 
 	padding-bottom: .3em;
 
 	border-bottom: 1px solid #EAECEF;
+}
+
+.markdown-body h1 .anchor {
+	line-height: 1;
 }
 
 .markdown-body h2 {
-	font-size: 1.3em;
+	font-size: 1.7em;
+	line-height: 1.225;
 
 	padding-bottom: .3em;
 
 	border-bottom: 1px solid #EAECEF;
 }
 
+.markdown-body h2 .anchor {
+	line-height: 1;
+}
+
 .markdown-body h3 {
-	font-size: 1.15em;
+	font-size: 1.5em;
+	line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+	line-height: 1.2;
 }
 
 .markdown-body h4 {
-	font-size: .95em;
+	font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+	line-height: 1.2;
 }
 
 .markdown-body h5 {
-	font-size: .85em;
+	font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+	line-height: 1.1;
 }
 
 .markdown-body h6 {
-	font-size: .825em;
+	font-size: 1em;
 
 	color: #6A737D;
 }
@@ -4012,3 +4062,4 @@ body,
     color: inherit
 }
 */
+

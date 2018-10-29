@@ -10,7 +10,7 @@
                 </a>
                 {% endif %}
                 {% else %}
-                <a href="{{ config.root }}" title="Home">{{ __('home') }}</a>
+                <a href="{{ config.root }}" title="Home">HOME</a>
                 {% endif %}
             </li>
             {% if theme.menu %}
@@ -22,7 +22,15 @@
             {% endif %}
         </ul> 
     </div>
+    {% if theme.local_search %}
+    <div class="search-button">
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    </div>
+    {% endif %} 
     <div class="site-nav-right">
+        {% if theme.local_search %}
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+        {% endif %} 
         {% include 'social.swig' %}
     </div>
 </nav>

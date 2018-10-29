@@ -1,4 +1,4 @@
-# config
+# Config
 rss:            # link
 favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
 blog_logo: 
@@ -6,13 +6,13 @@ header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
 bio: This is a demo
 post_toc: true
 
-# keywords
+# Keywords
 keywords: hexo, casper, ghost, theme
 
-# menu
+# Menu
 menu:
-  About: /about
-  Archives: /archives
+  ABOUT: /about
+  ARCHIVES: /archives
   # you can add here
 
 # author
@@ -35,18 +35,26 @@ footer_text:
   # 粤ICP备xxxxxxx号-x: http://www.miitbeian.gov.cn
   # 粤公网安备xxxxxxx号: http://www.beian.gov.cn
 
-# widget
+# Widget
 widgets:
   recent_posts: true
   category: true
   tagcloud: true
   # This is a simple theme, I think 3 is enough.
 
-# gallery
+# Gallery
 # https://github.com/sachinchoolur/lightgallery.js
 lightgallery: true
 
-# comment
+# LazyLoad
+# home page has enabled, this value is to post page
+# https://github.com/dinbror/blazy
+lazyload: true
+
+# Local Search
+local_search: true
+
+# Comment
 # https://valine.js.org
 comment: false
 valine:

@@ -18,7 +18,7 @@
         </header>
         <article class="post-full {% if not page.feature_img %}no-image{% endif %}">
             {% if page.feature_img %}
-            <figure class="post-full-image b-lazy" data-src="{{ page.feature_img }}">
+            <figure class="post-full-image" style="background-image: url({{ page.feature_img }})">
             </figure>
             {% endif %}
             <section class="post-full-content">
@@ -28,7 +28,23 @@
             </section>
         </article>
     </div>
-    {% include 'public/pagination.swig' %}
+
+    {# 在文章底部显示上下篇 #}
+    <div style="height: 4vw;width: 100%"></div>
+    <nav class="pagination">
+        {% if page.prev %}
+        <a class="prev-post" title="{{ page.prev.title }}" href="{{ url_for(page.prev.path) }}">
+            ← {{ page.prev.title }}
+        </a>
+        {% endif %}
+        <span class="prev-next-post">•</span>
+        {% if page.next %}
+        <a class="next-post" title="{{ page.next.title }}" href="{{ url_for(page.next.path) }}">
+            {{ page.next.title }} →
+        </a>
+        {% endif %}
+    </nav>
+
     {% if theme.comment %}
     <div class="inner">
         <div id="comment"></div>

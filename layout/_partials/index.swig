@@ -53,8 +53,8 @@
 							</li>
 						</ul>
 						<span class="reading-time">
-							{{ Math.round(strip_html(post.content).length/400) }}
-							 min read
+							{{ Math.round(strip_html(post.content).length/500) }}
+							min read
 						</span>
 					</footer>
 				</div>
@@ -62,6 +62,17 @@
 			{% endfor %}
 		</div>
 	</div>
-	{% include 'public/pagination.swig' %}
+
+	{# 显示页号 #}
+	{% if config.index_generator.per_page !== 0 %}
+	<nav class="pagination">
+		{% if page.total > 1 %}
+		<nav class="page-nav">
+			{{ paginator({prev_text: '← Prev', next_text: 'Next →'}) }}
+		</nav>
+		{% endif %}
+	</nav>
+	{% endif %}
+	
 </main>
 {% endmacro %}

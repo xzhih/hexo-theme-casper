@@ -36,8 +36,10 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - Pagination
 - Syntax Highlighting ( use [highlight.js](https://highlightjs.org) github style )
 - Responsive Web Design
-- valine comment
-- chrome Nav Color
+- Lazy load
+- Local search
+- Valine comment
+- Chrome Nav Color
 - Baidu Push
 - Google Analytics
 - SEO
@@ -84,13 +86,12 @@ keywords:
 $ hexo new page about
 ```
 
-
 ## Configuration
 
 Edit `themes/hexo-casper/_config.yml` and set up what you want to show
 
 ```yaml
-# config
+# Config
 rss:            # link
 favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
 blog_logo: 
@@ -98,13 +99,13 @@ header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
 bio: This is a demo
 post_toc: true
 
-# keywords
+# Keywords
 keywords: hexo, casper, ghost, theme
 
-# menu
+# Menu
 menu:
-  About: /about
-  Archives: /archives
+  ABOUT: /about
+  ARCHIVES: /archives
   # you can add here
 
 # author
@@ -127,18 +128,26 @@ footer_text:
   # 粤ICP备xxxxxxx号-x: http://www.miitbeian.gov.cn
   # 粤公网安备xxxxxxx号: http://www.beian.gov.cn
 
-# widget
+# Widget
 widgets:
   recent_posts: true
   category: true
   tagcloud: true
   # This is a simple theme, I think 3 is enough.
 
-# gallery
+# Gallery
 # https://github.com/sachinchoolur/lightgallery.js
 lightgallery: true
 
-# comment
+# LazyLoad
+# home page has enabled, this value is to post page
+# https://github.com/dinbror/blazy
+lazyload: true
+
+# Local Search
+local_search: true
+
+# Comment
 # https://valine.js.org
 comment: false
 valine:
@@ -170,11 +179,15 @@ CDN:
   highlightjs: https://cdn.staticfile.org/highlight.js/9.10.0/highlight.min.js
   lightgalleryjs: https://cdn.staticfile.org/lightgallery/1.3.9/js/lightgallery.min.js
   lightgallerycss: https://cdn.staticfile.org/lightgallery/1.3.9/css/lightgallery.min.css
-
 ```
 
 ## Contributor
 
 [batkiz](https://github.com/xzhih/hexo-theme-casper/commits?author=batkiz)
+
+### Local Search
+
+https://github.com/wzpan/hexo-generator-search 
+https://github.com/SuperKieran/hexo-generator-search-zip
 
 ## [Copyright & License](https://github.com/TryGhost/Casper/blob/master/LICENSE)

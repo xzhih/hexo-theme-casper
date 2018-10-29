@@ -20,9 +20,9 @@
 {% set body_class = 'post-template' %}
 {% endif %}
 <head>
-	{# {{ css('css/screen') }} #}
-	{# {{ css('css/style') }} #}
-	{{ css('css/allinone.min') }} 
+	{{ css('css/screen') }}
+	{{ css('css/style') }}
+	{# {{ css('css/allinone.min') }}  #}
 
 	{% if theme.googleAnalytics %}
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -77,24 +77,5 @@
 	<meta property="article:published_time" content="{{ date(page.date, 'YYYY-MM-DDTHH:MM:SS+08:00') }}"/> 
 	<meta property="article:author" content="{{ config.author }}">
 	<meta property="article:published_first" content="{{ config.title }}, {{ url_for(page.path) }}" />
-	{% endif %}
-
-	{% if is_post() %}
-	{% if theme.CDN.jquery %}
-	<script src="{{ theme.CDN.jquery }}"></script>
-	{% else %}
-	{{ js('js/jquery') }}
-	{% endif %}
-
-	{% if theme.CDN.highlightjs %}
-	<script src="{{ theme.CDN.highlightjs }}"></script>
-	{% else %}
-	{{ js('js/highlight.min') }}
-	{% endif %}
-
-	{% if theme.comment %}
-	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-	<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js '></script>
-	{% endif %}
 	{% endif %}
 </head>
