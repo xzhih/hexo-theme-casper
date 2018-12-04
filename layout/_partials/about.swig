@@ -13,7 +13,7 @@
                 {% if theme.author_location %}
                 <div class="author-location">{{ theme.author_location }} <span class="bull">&bull;</span></div>
                 {% endif %}
-                <a class="author-stats" style="color: white" href="{{ theme.menu.ARCHIVES }}" title="{{ _p('total', site.posts.length) }}">
+                <a class="author-stats" style="color: white" href="{{ url_for('/archives') }}" title="{{ _p('total', site.posts.length) }}">
                     {{ _p('total', site.posts.length) }}
                     <span class="bull">&bull;</span>
                 </a>

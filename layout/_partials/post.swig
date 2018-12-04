@@ -31,7 +31,7 @@
 
     {# 在文章底部显示上下篇 #}
     <div style="height: 4vw;width: 100%"></div>
-    <nav class="pagination">
+    <nav id="gobottom" class="pagination">
         {% if page.prev %}
         <a class="prev-post" title="{{ page.prev.title }}" href="{{ url_for(page.prev.path) }}">
             ← {{ page.prev.title }}

@@ -20,9 +20,12 @@
 {% set body_class = 'post-template' %}
 {% endif %}
 <head>
-	{# {{ css('css/screen') }} #}
-	{# {{ css('css/style') }} #}
-	{{ css('css/allinone.min') }} 
+	{# {{ css('css/screen') }}
+	{{ css('css/style') }}
+	{{ css('css/markdown') }}
+	{{ css('css/highlight') }} #}
+	
+	{{ css('css/allinone.min') }}
 
 	{% if theme.googleAnalytics %}
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -41,7 +44,7 @@
 	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
 
 	<meta name="HandheldFriendly" content="True" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 	<meta name="generator" content="hexo">
 	<meta name="author" content="{{ config.author }}">
 	<meta name="description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
@@ -52,6 +55,7 @@
 
 	{% if theme.favicon %}
 	{{ favicon_tag(theme.favicon) }}
+	<link rel="apple-touch-icon" href="{{ theme.favicon }}"/>
 	{% endif %}
 
 	{% if theme.navColor %}
@@ -60,7 +64,7 @@
 	{% endif %}
 
 	{% if theme.manifest %}
-	<link rel="manifest" href="/manifest.json">
+	<link rel="manifest" href="{{ url_for('/manifest.json') }}">
 	{% endif %}
 
 	{% if theme.rss %}

@@ -38,8 +38,8 @@
 						</section>
 					</a>
 					<footer class="post-card-meta">
-						<ul class="author-list">
-							<li class="author-list-item">
+						<div class="author-list">
+							<div class="author-list-item">
 								<div class="author-name-tooltip">{{ config.author }}</div>
 								{% if theme.author_image %}
 								<a href="/about" class="static-avatar">
@@ -50,8 +50,8 @@
 									{% include "public/icons/avatar.svg" %}
 								</a>
 								{% endif %}
-							</li>
-						</ul>
+							</div>
+						</div>
 						<span class="reading-time">
 							{{ Math.round(strip_html(post.content).length/500) }}
 							min read

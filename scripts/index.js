@@ -2,16 +2,25 @@
 * @Author: xzhih
 * @Date:   2018-10-28 22:17:29
 * @Last Modified by:   xzhih
-* @Last Modified time: 2018-10-30 03:17:21
+* @Last Modified time: 2018-12-04 16:09:08
 */
+
+// service worker
+hexo.extend.generator.register('txt', () => {
+	var r = hexo.config.root
+	var sw = 'var CACHE_NAME="'+(+new Date())+'",urlsToCache=["'+r+'"];self.addEventListener("install",function(e){e.waitUntil(caches.open(CACHE_NAME).then(function(e){return e.addAll(urlsToCache)}))}),self.addEventListener("activate",function(e){e.waitUntil(caches.keys().then(function(e){return Promise.all(e.map(function(e){if(e!==CACHE_NAME)return caches.delete(e)}))}))}),self.addEventListener("fetch",function(n){n.respondWith(caches.match(n.request).then(function(e){if(e)return e;var t=n.request.clone();return fetch(t).then(function(e){if(!e||200!==e.status||"basic"!==e.type)return e;var t=e.clone();return caches.open(CACHE_NAME).then(function(e){e.put(n.request,t)}),e})}))});';
+	return {
+		path: 'sw.js',
+		data: sw
+	};
+});
 
 // hexo.log.warn()
 
+// local search
 hexo.extend.generator.register('json', locals => {
 
-	if (!hexo.theme.config.local_search) {
-		return
-	}
+	if (!hexo.theme.config.local_search) return
 
 	'use strict'
 	var config = hexo.config
@@ -61,11 +70,10 @@ hexo.extend.generator.register('json', locals => {
 	]
 })
 
+// lazyload
 hexo.extend.filter.register('after_generate', () => {
 
-	if (!hexo.theme.config.lightgallery && !hexo.theme.config.lazyload) {
-		return
-	}
+	if (!hexo.theme.config.lightgallery && !hexo.theme.config.lazyload) return
 
 	'use strict'
 	const route = hexo.route;
@@ -85,8 +93,9 @@ hexo.extend.filter.register('after_generate', () => {
 					$(this).attr('href', imgSrc)
 					
 					if (hexo.theme.config.lazyload) {
-						$(this).attr('data-src', imgSrc)
+						$(this).attr('data-src', imgSrc);
 						$(this).addClass('b-lazy');
+						$(this).removeAttr('src');
 					}
 				})
 				resolve({ path, html: $.html() });

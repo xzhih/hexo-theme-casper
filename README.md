@@ -24,7 +24,7 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-![hexo-theme-casper.jpg](https://i.loli.net/2017/11/26/5a19dd5331bea.jpg)
+![hexo-theme-casper.jpg](https://i.loli.net/2018/11/05/5be0665656ea9.jpg)
 
 ## Features
 
@@ -32,26 +32,25 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - Posts feature image
 - Customized navigation menu 
 - Customized favicon, logo, header image, author image
-- Social links ( now support FB, TT ) 
+- Social links ( now support FB, TT、github、bilibili、YouTube、weibo) 
 - 3 widgets ( I think no need more )
 - Tag, Category, TOC 
 - Pagination
-- Syntax Highlighting ( use [highlight.js](https://highlightjs.org) github style )
+- Syntax Highlighting 
 - Responsive Web Design
 - Lazy load
 - Local search
 - Valine comment
 - Chrome Nav Color
-- Baidu Push
-- Google Analytics
-- SEO
+- Baidu Push Google Analytics
+- Service Worker
 
 ## Installation
 
 **Install**
 
 ```
-$ git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper
+git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper
 ```
 
 **Enable**
@@ -63,8 +62,8 @@ Modify `theme` in `_config.yml` to `hexo-casper` .
 You'd better backup old file first.
 
 ```
-$ cd themes/casper 
-$ git pull
+cd themes/casper 
+git pull
 ```
 
 **Front-matter**
@@ -85,7 +84,7 @@ keywords:
 **PS: Add about page**
 
 ```
-$ hexo new page about
+hexo new page about
 ```
 
 ## Configuration
@@ -121,7 +120,9 @@ social:
   github: https://github.com/xzhih
   twitter: https://twitter.com
   facebook: https://facebook
-  telegram:
+  telegram: 
+  bilibili: 
+  youtube: 
   # You only can use that I have added, I will keep adding
 
 # Footer Links
@@ -164,6 +165,7 @@ valine:
 # PWA
 # you need create a manifest.json file in hexo's source folder
 manifest: false
+service_workers: false
 
 navColor: '3c484e'
 
@@ -174,18 +176,7 @@ baidu: false
 googleAnalytics: false
 GA_TRACKING_ID: UA-XXXXXXXXXX-1
 
-# Your Own CDN Links
-# if you don't need the default cdn links, just delete, this theme will get files from source  
-CDN: 
-  jquery: https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js
-  highlightjs: https://cdn.staticfile.org/highlight.js/9.10.0/highlight.min.js
-  lightgalleryjs: https://cdn.staticfile.org/lightgallery/1.3.9/js/lightgallery.min.js
-  lightgallerycss: https://cdn.staticfile.org/lightgallery/1.3.9/css/lightgallery.min.css
 ```
-
-## Contributor
-
-[batkiz](https://github.com/xzhih/hexo-theme-casper/commits?author=batkiz)
 
 ### Local Search
 

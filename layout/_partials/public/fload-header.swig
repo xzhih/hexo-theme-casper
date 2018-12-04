@@ -1,6 +1,6 @@
 <div class="floating-header" >
 	<div class="floating-header-logo">
-        <a href="{{ config.root }}" title="{{ config.title }}">
+        <a href="{{ url_for('/') }}" title="{{ config.title }}">
 			{% if theme.favicon %}
                 <img src="{{ theme.favicon }}" alt="{{ config.title }} icon" />
 			{% endif %}
