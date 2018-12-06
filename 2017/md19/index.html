@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html default>
+<html lang="default">
 
 
 
@@ -10,7 +10,7 @@
 <head>
 	
 	
-	<link rel="stylesheet" href="/hexo-theme-casper/css/allinone.min.css"> 
+	<link rel="stylesheet" href="/hexo-theme-casper/css/allinone.min.css">
 
 	
 
@@ -20,7 +20,7 @@
 	<title>Hexo-Theme-Casper | DEMO-Title</title>
 
 	<meta name="HandheldFriendly" content="True">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Xzhih">
 	<meta name="description" content="">
@@ -31,6 +31,7 @@
 
 	
 	<link rel="shortcut icon" href="https://i.loli.net/2017/11/26/5a19c0b50432e.png">
+	<link rel="apple-touch-icon" href="https://i.loli.net/2017/11/26/5a19c0b50432e.png">
 	
 
 	
@@ -151,7 +152,7 @@
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>A new <a href="https://github.com/TryGhost/Casper" target="_blank" rel="external">Ghost’s Casper theme</a> port to <a href="hexo.io">Hexo</a>.</p>
+                    <p>A new <a href="https://github.com/TryGhost/Casper" target="_blank" rel="noopener">Ghost’s Casper theme</a> port to <a href="hexo.io">Hexo</a>.</p>
 <p>This is a simple and beautiful hexo theme.</p>
 <p>When I was searching <code>beautiful hexo themes</code>, I saw the old version of Casper port to Hexo, but the latest not. So I decided that I would port it.</p>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
@@ -163,52 +164,19 @@
 <li>3 widgets ( I think no need more )</li>
 <li>Tag, Category, TOC </li>
 <li>Pagination</li>
-<li>Syntax Highlighting ( use <a href="https://highlightjs.org" target="_blank" rel="external">highlight.js</a> github style )</li>
+<li>Syntax Highlighting ( use <a href="https://highlightjs.org" target="_blank" rel="noopener">highlight.js</a> github style )</li>
 <li>Responsive Web Design</li>
 </ul>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p><strong>Install</strong></p>
-<pre><code class="shell">git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xzhih/hexo-theme-casper.git themes/hexo-casper</span><br></pre></td></tr></table></figure>
 <p><strong>Enable</strong></p>
 <p>Modify <code>theme</code> in <code>_config.yml</code> to <code>hexo-casper</code> .</p>
 <p><strong>Update</strong></p>
 <p>You’d better backup old file first.</p>
-<pre><code class="shell">cd themes/casper 
-git pull
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/casper </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
 <h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>Edit <code>themes/hexo-casper/_config.yml</code> and set up what you want to show</p>
-<pre><code># config
-rss:            # link
-favicon:        # link
-blog_logo:      # link
-header_image: //demo.ghost.io/content/images/2017/07/blog-cover.jpg 
-
-# menu
-menu:
-  About: /about
-  Archives: /archives
-  # you can add here
-
-# author
-author_image:   # link
-
-# Social Links
-social:
-  facebook: https://www.facebook.com
-  twitter: https://www.twitter.com
-  # You only can use that I have added, I will keep adding
-
-# widget
-widgets:
-  recent_posts: true
-  category: true
-  tagcloud: true
-  # This is a simple theme, I think 3 is enough.
-
-# gallery
-# https://github.com/sachinchoolur/lightgallery.js
-lightgallery: true
-</code></pre><h2 id="Copyright-amp-License"><a href="#Copyright-amp-License" class="headerlink" title="Copyright &amp; License"></a><a href="https://github.com/TryGhost/Casper/blob/master/LICENSE" target="_blank" rel="external">Copyright &amp; License</a></h2>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># config</span></span><br><span class="line"><span class="attr">rss:</span>            <span class="comment"># link</span></span><br><span class="line"><span class="attr">favicon:</span>        <span class="comment"># link</span></span><br><span class="line"><span class="attr">blog_logo:</span>      <span class="comment"># link</span></span><br><span class="line"><span class="attr">header_image:</span> <span class="string">//demo.ghost.io/content/images/2017/07/blog-cover.jpg</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># menu</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  About:</span> <span class="string">/about</span></span><br><span class="line"><span class="attr">  Archives:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="comment"># you can add here</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># author</span></span><br><span class="line"><span class="attr">author_image:</span>   <span class="comment"># link</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line"><span class="attr">  facebook:</span> <span class="attr">https://www.facebook.com</span></span><br><span class="line"><span class="attr">  twitter:</span> <span class="attr">https://www.twitter.com</span></span><br><span class="line">  <span class="comment"># You only can use that I have added, I will keep adding</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># widget</span></span><br><span class="line"><span class="attr">widgets:</span></span><br><span class="line"><span class="attr">  recent_posts:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  category:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  tagcloud:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># This is a simple theme, I think 3 is enough.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># gallery</span></span><br><span class="line"><span class="comment"># https://github.com/sachinchoolur/lightgallery.js</span></span><br><span class="line"><span class="attr">lightgallery:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="Copyright-amp-License"><a href="#Copyright-amp-License" class="headerlink" title="Copyright &amp; License"></a><a href="https://github.com/TryGhost/Casper/blob/master/LICENSE" target="_blank" rel="noopener">Copyright &amp; License</a></h2>
                 </div>
             </section>
         </article>
@@ -216,7 +184,7 @@ lightgallery: true
 
     
     <div style="height: 4vw;width: 100%"></div>
-    <nav class="pagination">
+    <nav id="gobottom" class="pagination">
         
         <a class="prev-post" title="Hexo-Theme-Casper" href="/hexo-theme-casper/2017/md11/">
             ← Hexo-Theme-Casper
@@ -224,8 +192,8 @@ lightgallery: true
         
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="Hello World" href="/hexo-theme-casper/2017/md22/">
-            Hello World →
+        <a class="next-post" title="Hexo-Theme-Casper" href="/hexo-theme-casper/2017/md32/">
+            Hexo-Theme-Casper →
         </a>
         
     </nav>
@@ -233,21 +201,20 @@ lightgallery: true
     
 </main>
 
-<div class="t-g-control">
-    <div class="gotop">
-        <svg class="icon" width="32px" height="32px" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z" fill="#8a8a8a"/></svg>
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
+            <svg class="toc-close hide" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
+        </a>
     </div>
-    <div class="toc-control">
-        <svg class="icon toc-icon" width="32px" height="32.00px" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64" fill="#8a8a8a"/></svg>
-        <svg class="icon toc-close" style="display: none;" width="32px" height="32.00px" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z" fill="#8a8a8a"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z" fill="#8a8a8a"/></svg>
-    </div>
-    <div class="gobottom">
-        <svg class="icon" width="32px" height="32.00px" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z" fill="#8a8a8a"/></svg>
-    </div>
-</div>
-<div class="toc-main" style="right: -100%">
-    <div class="post-toc">
-        <span>TOC</span>
+    <div class="toc-main">
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration"><span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Copyright-amp-License"><span class="toc-text">Copyright &amp; License</span></a></li></ol>
     </div>
 </div>
@@ -280,19 +247,19 @@ lightgallery: true
       
       
       <li>
+        <a href="/hexo-theme-casper/2018/hexo-theme-casper/">Hexo-Theme-Casper</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/hexo-theme-casper/2018/chinese-test/">中文显示测试</a>
+      </li>
+      
+      
+      
+      <li>
         <a href="/hexo-theme-casper/2017/I Have a Dream/">I Have a Dream</a>
-      </li>
-      
-      
-      
-      <li>
-        <a href="/hexo-theme-casper/2017/hexo-theme-casper/">Hexo-Theme-Casper</a>
-      </li>
-      
-      
-      
-      <li>
-        <a href="/hexo-theme-casper/2017/hello-world/">Hello World</a>
       </li>
       
       
@@ -383,7 +350,7 @@ lightgallery: true
         
         <img class="search-overlay-logo" src="https://i.loli.net/2017/11/26/5a19c0b50432e.png" alt="DEMO-Title">
         
-        <input id="local-search-input" class="search-input" type="search" name="search" placeholder="Search ...">
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
         <a class="search-overlay-close" href="#"></a>
     </div>
     <div id="local-search-result"></div>
@@ -406,18 +373,20 @@ lightgallery: true
 	
 
 
-
-
-
 <script>
-    /*!
-  hey, [be]Lazy.js - v1.8.2 - 2016.10.25
-  A fast, small and dependency free lazy load script (https://github.com/dinbror/blazy)
-  (c) Bjoern Klinggaard - @bklinggaard - http://dinbror.dk/blazy
-*/
-  (function(q,m){"function"===typeof define&&define.amd?define(m):"object"===typeof exports?module.exports=m():q.Blazy=m()})(this,function(){function q(b){var c=b._util;c.elements=E(b.options);c.count=c.elements.length;c.destroyed&&(c.destroyed=!1,b.options.container&&l(b.options.container,function(a){n(a,"scroll",c.validateT)}),n(window,"resize",c.saveViewportOffsetT),n(window,"resize",c.validateT),n(window,"scroll",c.validateT));m(b)}function m(b){for(var c=b._util,a=0;a<c.count;a++){var d=c.elements[a],e;a:{var g=d;e=b.options;var p=g.getBoundingClientRect();if(e.container&&y&&(g=g.closest(e.containerClass))){g=g.getBoundingClientRect();e=r(g,f)?r(p,{top:g.top-e.offset,right:g.right+e.offset,bottom:g.bottom+e.offset,left:g.left-e.offset}):!1;break a}e=r(p,f)}if(e||t(d,b.options.successClass))b.load(d),c.elements.splice(a,1),c.count--,a--}0===c.count&&b.destroy()}function r(b,c){return b.right>=c.left&&b.bottom>=c.top&&b.left<=c.right&&b.top<=c.bottom}function z(b,c,a){if(!t(b,a.successClass)&&(c||a.loadInvisible||0<b.offsetWidth&&0<b.offsetHeight))if(c=b.getAttribute(u)||b.getAttribute(a.src)){c=c.split(a.separator);var d=c[A&&1<c.length?1:0],e=b.getAttribute(a.srcset),g="img"===b.nodeName.toLowerCase(),p=(c=b.parentNode)&&"picture"===c.nodeName.toLowerCase();if(g||void 0===b.src){var h=new Image,w=function(){a.error&&a.error(b,"invalid");v(b,a.errorClass);k(h,"error",w);k(h,"load",f)},f=function(){g?p||B(b,d,e):b.style.backgroundImage='url("'+d+'")';x(b,a);k(h,"load",f);k(h,"error",w)};p&&(h=b,l(c.getElementsByTagName("source"),function(b){var c=a.srcset,e=b.getAttribute(c);e&&(b.setAttribute("srcset",e),b.removeAttribute(c))}));n(h,"error",w);n(h,"load",f);B(h,d,e)}else b.src=d,x(b,a)}else"video"===b.nodeName.toLowerCase()?(l(b.getElementsByTagName("source"),function(b){var c=a.src,e=b.getAttribute(c);e&&(b.setAttribute("src",e),b.removeAttribute(c))}),b.load(),x(b,a)):(a.error&&a.error(b,"missing"),v(b,a.errorClass))}function x(b,c){v(b,c.successClass);c.success&&c.success(b);b.removeAttribute(c.src);b.removeAttribute(c.srcset);l(c.breakpoints,function(a){b.removeAttribute(a.src)})}function B(b,c,a){a&&b.setAttribute("srcset",a);b.src=c}function t(b,c){return-1!==(" "+b.className+" ").indexOf(" "+c+" ")}function v(b,c){t(b,c)||(b.className+=" "+c)}function E(b){var c=[];b=b.root.querySelectorAll(b.selector);for(var a=b.length;a--;c.unshift(b[a]));return c}function C(b){f.bottom=(window.innerHeight||document.documentElement.clientHeight)+b;f.right=(window.innerWidth||document.documentElement.clientWidth)+b}function n(b,c,a){b.attachEvent?b.attachEvent&&b.attachEvent("on"+c,a):b.addEventListener(c,a,{capture:!1,passive:!0})}function k(b,c,a){b.detachEvent?b.detachEvent&&b.detachEvent("on"+c,a):b.removeEventListener(c,a,{capture:!1,passive:!0})}function l(b,c){if(b&&c)for(var a=b.length,d=0;d<a&&!1!==c(b[d],d);d++);}function D(b,c,a){var d=0;return function(){var e=+new Date;e-d<c||(d=e,b.apply(a,arguments))}}var u,f,A,y;return function(b){if(!document.querySelectorAll){var c=document.createStyleSheet();document.querySelectorAll=function(a,b,d,h,f){f=document.all;b=[];a=a.replace(/\[for\b/gi,"[htmlFor").split(",");for(d=a.length;d--;){c.addRule(a[d],"k:v");for(h=f.length;h--;)f[h].currentStyle.k&&b.push(f[h]);c.removeRule(0)}return b}}var a=this,d=a._util={};d.elements=[];d.destroyed=!0;a.options=b||{};a.options.error=a.options.error||!1;a.options.offset=a.options.offset||100;a.options.root=a.options.root||document;a.options.success=a.options.success||!1;a.options.selector=a.options.selector||".b-lazy";a.options.separator=a.options.separator||"|";a.options.containerClass=a.options.container;a.options.container=a.options.containerClass?document.querySelectorAll(a.options.containerClass):!1;a.options.errorClass=a.options.errorClass||"b-error";a.options.breakpoints=a.options.breakpoints||!1;a.options.loadInvisible=a.options.loadInvisible||!1;a.options.successClass=a.options.successClass||"b-loaded";a.options.validateDelay=a.options.validateDelay||25;a.options.saveViewportOffsetDelay=a.options.saveViewportOffsetDelay||50;a.options.srcset=a.options.srcset||"data-srcset";a.options.src=u=a.options.src||"data-src";y=Element.prototype.closest;A=1<window.devicePixelRatio;f={};f.top=0-a.options.offset;f.left=0-a.options.offset;a.revalidate=function(){q(a)};a.load=function(a,b){var c=this.options;void 0===a.length?z(a,b,c):l(a,function(a){z(a,b,c)})};a.destroy=function(){var a=this._util;this.options.container&&l(this.options.container,function(b){k(b,"scroll",a.validateT)});k(window,"scroll",a.validateT);k(window,"resize",a.validateT);k(window,"resize",a.saveViewportOffsetT);a.count=0;a.elements.length=0;a.destroyed=!0};d.validateT=D(function(){m(a)},a.options.validateDelay,a);d.saveViewportOffsetT=D(function(){C(a.options.offset)},a.options.saveViewportOffsetDelay,a);C(a.options.offset);l(a.options.breakpoints,function(a){if(a.width>=window.screen.width)return u=a.src,!1});setTimeout(function(){q(a)})}});
-    ;(function() {var bLazy = new Blazy()})();
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
 </script>
+
+
+
+
 
 
 
@@ -440,119 +409,21 @@ lightgallery: true
 </div>
 
 
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 
 
+
+<script src="/hexo-theme-casper/js/mix/post-lazy-local.min.js"></script>
+
+<script>;(function() {var bLazy = new Blazy()})();</script>
+
+
+
+
+<script src="/hexo-theme-casper/js/lightgallery.min.js"></script>
+<link rel="stylesheet" href="/hexo-theme-casper/css/lightgallery.min.css">
 <script>
-    $(document).ready(function () {
-        // 阅读页面顶部进度条
-        var progressBar = document.querySelector('progress');
-        var header = document.querySelector('.floating-header');
-        var title = document.querySelector('.post-full-title');
-        var lastScrollY = window.scrollY;
-        var lastWindowHeight = window.innerHeight;
-        var lastDocumentHeight = $(document).height();
-        var ticking = false;
-        function onScroll() {
-            lastScrollY = window.scrollY;
-            requestTick();
-        }
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(update);
-            }
-            ticking = true;
-        }
-        function update() {
-            var rect = title.getBoundingClientRect();
-            var trigger = rect.top + window.scrollY;
-            var triggerOffset = title.offsetHeight + 35;
-            var progressMax = lastDocumentHeight - lastWindowHeight;
-
-            if (lastScrollY >= trigger + triggerOffset) {
-                header.classList.add('floating-active');
-            } else {
-                header.classList.remove('floating-active');
-            }
-            progressBar.setAttribute('max', progressMax);
-            progressBar.setAttribute('value', lastScrollY);
-            ticking = false;
-        }
-        window.addEventListener('scroll', onScroll, {passive: true});
-        update();
-
-        // TOC
-        var width = $('.toc-main').width();
-        $('.toc-control').click(function () {
-            if ($('.t-g-control').css('width')=="50px") {
-                if ($('.t-g-control').css('right')=="0px") {
-                    $('.t-g-control').animate({right: width}, "slow");
-                    $('.toc-main').animate({right: 0}, "slow");
-                    toc_icon()
-                } else {
-                    $('.t-g-control').animate({right: 0}, "slow");
-                    $('.toc-main').animate({right: -width}, "slow");
-                    toc_icon()
-                }
-            } else {
-                if ($('.toc-main').css('right')=="0px") {
-                    $('.toc-main').slideToggle("fast", toc_icon());
-                } else {
-                    $('.toc-main').css('right', '0px');
-                    toc_icon()
-                }
-            }
-        })
-        function toc_icon() {
-            if ($('.toc-icon').css('display')=="none") {
-                $('.toc-close').hide();
-                $('.toc-icon').show();
-            } else {
-                $('.toc-icon').hide();
-                $('.toc-close').show();
-            }
-        }
-
-        // 回到顶部
-        $('.gotop').click(function(){
-            $('html,body').animate({scrollTop:$('.post-full-header').offset().top}, 800);
-        });
-        $('.gobottom').click(function () {
-            $('html,body').animate({scrollTop:$('.pagination').offset().top}, 800);
-        });
-
-        // highlight
-        // https://highlightjs.org
-        $('pre code').each(function(i, block) {
-            hljs.highlightBlock(block);
-        });
-        $('td.code').each(function(i, block) {
-            hljs.highlightBlock(block);
-        });
-    });
-</script>
-
-
-<script src="https://cdn.staticfile.org/highlight.js/9.10.0/highlight.min.js"></script>
-
-
-
-
-
-
-
-<script src="https://cdn.staticfile.org/lightgallery/1.3.9/js/lightgallery.min.js"></script>
-
-
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/1.3.9/css/lightgallery.min.css">
-
-
-<script>
-    $(function () {
-        $('#lightgallery').lightGallery({
-            selector: '.post-img'
-        });
+    lightGallery(document.getElementById('lightgallery'), {
+        selector: '.post-img'
     });
 </script>
 
@@ -562,114 +433,12 @@ lightgallery: true
 
 
 
-<script type="text/javascript"> 
-    // 保存搜索数据
-    var keepSearchData = function () {
-        fetch('/hexo-theme-casper/searchData.json')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(resData) {
-            localStorage.setItem('searchData', JSON.stringify(resData));
-        })
-    }
 
-    // 检查和获取搜索数据
-    var checkAndGetData = function () {
-        fetch('/hexo-theme-casper/searchVersion.txt?t=' + (+new Date()))
-        .then(function(response) {
-            return response.text();
-        })
-        .then(function(resVersion) {
-            if (localStorage.getItem('searchVersion') !== resVersion) {
-                localStorage.setItem('searchVersion', resVersion);
-                keepSearchData()
-            }
-        })
-        searchFunc("local-search-input", "local-search-result");
-    }
 
-    // 监听搜索
-    var searchFunc = function(search_id, content_id) {
-        'use strict'
-        var localSearchData = localStorage.getItem("searchData");
-        var datas = JSON.parse(localSearchData);
-        var input = document.getElementById(search_id);
-        if (!input) return;
-        var resultContent = document.getElementById(content_id);
-        input.addEventListener("input", function() {
-            if (typeof(localSearchData) !== 'string') {
-                localSearchData = localStorage.getItem("searchData");
-                datas = JSON.parse(localSearchData);
-            }
-            var str = '<ul class="search-result-list">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            resultContent.innerHTML = "";
-            if (this.value.trim().length <= 0) {
-                return;
-            }
-            datas.forEach(function(data) {
-                var isMatch = true;
-                var content_index = [];
-                if (!data.title || data.title.trim() === "") {
-                    data.title = "Untitled";
-                }
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                var data_url = data.url;
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                if (data_content !== "") {
-                    keywords.forEach(function(keyword, i) {
-                        index_title = data_title.indexOf(keyword);
-                        index_content = data_content.indexOf(keyword);
-                        if (index_title < 0 && index_content < 0) {
-                            isMatch = false;
-                        } else {
-                            if (index_content < 0) {
-                                index_content = 0;
-                            }
-                            if (i == 0) {
-                                first_occur = index_content;
-                            }
-                        }
-                    });
-                } else {
-                    isMatch = false;
-                }
-                if (isMatch) {
-                    str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                    var content = data.content.trim().replace(/<[^>]+>/g, "");
-                    if (first_occur >= 0) {
-                        var start = first_occur - 20;
-                        var end = first_occur + 80;
-                        if (start < 0) {
-                            start = 0;
-                        }
-                        if (start == 0) {
-                            end = 100;
-                        }
-                        if (end > content.length) {
-                            end = content.length;
-                        }
-                        var match_content = content.substr(start, end);
-                        keywords.forEach(function(keyword) {
-                            var regS = new RegExp(keyword, "gi");
-                            match_content = match_content.replace(regS, '<em class="search-keyword">' + keyword + "</em>");
-                        });
-                        str += '<p class="search-result">' + match_content + "...</p>";
-                    }
-                    str += "</li>";
-                }
-            });
-            str += "</ul>";
-            resultContent.innerHTML = str;
-        });
-    };
+<script>searchFunc("/hexo-theme-casper/")</script>
 
-    checkAndGetData()
-</script>
+
+
 
 
 </body>
