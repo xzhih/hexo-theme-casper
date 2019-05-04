@@ -27,9 +27,9 @@
 						</header>
 						<section class="post-card-excerpt">
 							<p>
-								{% set num = 100 %}
+								{% set num = 160 %}
 								{% if not post.cover_img %}
-								{% set num = 240 %}
+								{% set num = 340 %}
 								{% endif %}
 								{% set content = post.content | striptags %}
 								{{ content.substring(0, num) }}
