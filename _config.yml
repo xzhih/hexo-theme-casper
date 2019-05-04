@@ -83,14 +83,3 @@ baidu: false
 googleAnalytics: true
 GA_TRACKING_ID: UA-131919757-1
 
-# hexo-filter-responsive-images
-responsive_images:
-  pattern: '**/*.+(png|jpg|jpeg)'
-  sizes:
-    small:
-      width: 800
-      withoutEnlargement: true
-    large:
-      width: 2000
-      withoutEnlargement: true
-
