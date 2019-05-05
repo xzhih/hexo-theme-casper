@@ -49,7 +49,7 @@
                 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-	this.page.url = "{{ url_for(page.url) }}";  
+	this.page.url = "{{ config.url }}{{ config.root }}{{ page.path }}";  
 	this.page.identifier = "{{ page.identifier }}"
 };
 (function() {
