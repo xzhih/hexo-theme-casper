@@ -5,12 +5,12 @@
         <header class="post-full-header">
             <section class="post-full-meta">
                 <time  class="post-full-meta-date" datetime="{{ date_xml(page.date) }}" itemprop="datePublished">
-                    {{ date(page.date, 'YYYY-MM-D') }}
+                    {{ date(page.date, 'YYYY-MM-DD') }}
                 </time>
-                {% if page.categories %}
+                {% if page.tags %}
+                {% for tag in page.tags %}
                 <span class="date-divider">/</span>
-                {% for cate in page.categories %}
-                <a href="{{ url_for(cate.path) }}">{{ cate.name }}</a>&nbsp;&nbsp;
+                <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
                 {% endfor %}
                 {% endif %}
             </section>

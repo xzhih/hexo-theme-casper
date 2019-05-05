@@ -24,8 +24,13 @@
 	{{ css('css/style') }}
 	{{ css('css/markdown') }}
 	{{ css('css/highlight') }} #}
-	
+
 	{{ css('css/allinone.min') }}
+
+	{% if is_post() && theme.prismjs %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css">
+	{% endif %}
+
 
 	{% if theme.googleAnalytics %}
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -76,10 +81,13 @@
 	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}">
 	<meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
+	<meta property="og:image" content="{{ config.url }}{{ config.root }}{% if is_post() %}{{ page.cover_img }}{% endif %}">
+	<meta name="twitter:card" content="summary_large_image">
 
 	{% if is_post() %}
 	<meta property="article:published_time" content="{{ date(page.date, 'YYYY-MM-DDTHH:MM:SS+08:00') }}"/> 
 	<meta property="article:author" content="{{ config.author }}">
 	<meta property="article:published_first" content="{{ config.title }}, {{ url_for(page.path) }}" />
+	<meta property="article:tag" content="{{ page.tags }}" />
 	{% endif %}
 </head>

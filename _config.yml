@@ -1,5 +1,5 @@
 # Config
-rss:            # link
+rss: https://isonaj.github.io/atom.xml           # link
 favicon: /images/Anthony-Square-Color.png
 blog_logo: /images/Anthony-Square-Color.png
 header_image: /images/imleedh-ali-677414-unsplash.jpg
@@ -47,7 +47,8 @@ widgets:
 
 # Gallery
 # https://github.com/sachinchoolur/lightgallery.js
-lightgallery: true
+lightgallery: false
+prismjs: true
 
 # LazyLoad
 # home page has enabled, this value is to post page
