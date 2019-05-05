@@ -37,7 +37,7 @@
 
 {# 文章页面 #}
 {% if is_post() %}
-{% include "public/fload-header.swig" %}
+{% include "public/float-header.swig" %}
 
 {# 如果开启文章页懒加载 #}
 {% if theme.lazyload %}
@@ -129,3 +129,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/components/prism-yaml.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/components/prism-markup.min.js"></script>
 {% endif %}
+
