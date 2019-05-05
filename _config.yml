@@ -1,9 +1,9 @@
 # Config
-rss:            # link
-favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
-blog_logo: 
-header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
-bio: This is a demo
+rss: https://isonaj.github.io/atom.xml           # link
+favicon: /images/Anthony-Square-Color.png
+blog_logo: #/images/Anthony-Square-Color.png
+header_image: /images/imleedh-ali-677414-unsplash.jpg
+bio: Software development and DevOps. Bringing solutions to life.
 post_toc: true
 
 # Keywords
@@ -16,19 +16,20 @@ menu:
   # you can add here
 
 # author
-author_image:   # link
+author_image: /images/Anthony-Square-Color.png  # link
 author_bio: 
 author_location: 
 
 # Social Links
 social:
-  weibo: https://weibo.com/xzhih
-  github: https://github.com/xzhih
-  twitter: https://twitter.com
-  facebook: https://facebook
+  weibo: 
+  github: https://github.com/isonaj
+  twitter: https://twitter.com/isonaj
+  facebook: 
   telegram:
   bilibili: 
-  youtube: 
+  youtube: https://www.youtube.com/channel/UC4_sgo322GFudAjSXbyQdmw
+  rss: https://feedly.com/i/subscription/feed/https://isonaj.github.io/atom.xml
   # You only can use that I have added, I will keep adding
 
 # Footer Links
@@ -46,7 +47,8 @@ widgets:
 
 # Gallery
 # https://github.com/sachinchoolur/lightgallery.js
-lightgallery: true
+lightgallery: false
+prismjs: true
 
 # LazyLoad
 # home page has enabled, this value is to post page
@@ -79,5 +81,7 @@ navColor: '3c484e'
 baidu: false
 
 # Google Analytics
-googleAnalytics: false
-GA_TRACKING_ID: UA-XXXXXXXXXX-1
+googleAnalytics: true
+GA_TRACKING_ID: UA-131919757-1
+
+disqus_shortname: anthonyison

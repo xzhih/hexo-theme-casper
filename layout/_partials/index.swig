@@ -14,9 +14,9 @@
 					<a class="post-card-content-link" title="{{ post.title }}" href="{{ url_for(post.path) }}">
 						<header class="post-card-header">
 							<span class="post-card-tags">
-								{% if post.categories %}
-								{% for cate in post.categories %}
-								{{ cate.name }}
+								{% if post.tags %}
+								{% for tag in post.tags %}
+								{{ tag.name }}
 								{% endfor %}| 
 								{% endif %}
 								<time datetime="{{ date_xml(post.date) }}" itemprop="datePublished">
@@ -27,9 +27,9 @@
 						</header>
 						<section class="post-card-excerpt">
 							<p>
-								{% set num = 100 %}
+								{% set num = 160 %}
 								{% if not post.cover_img %}
-								{% set num = 240 %}
+								{% set num = 340 %}
 								{% endif %}
 								{% set content = post.content | striptags %}
 								{{ content.substring(0, num) }}

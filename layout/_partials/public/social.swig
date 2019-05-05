@@ -35,4 +35,9 @@
         {% include "icons/youtube.svg" %}
     </a>
     {% endif %}
+    {% if theme.social.rss %}
+    <a class="social-link" title="rss" href="{{ theme.social.rss }}" target="_blank" rel="noopener">
+        {% include "icons/rss.svg" %}
+    </a>
+    {% endif %}
 </div>

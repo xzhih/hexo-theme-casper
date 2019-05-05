@@ -31,6 +31,8 @@ em {
 
 .markdown-body> :first-child {
     margin-top: 0;
+    font-size: 1.25em;
+    line-height: 1.5em;
 }
 
 .markdown-body li {

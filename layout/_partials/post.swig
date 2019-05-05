@@ -5,12 +5,12 @@
         <header class="post-full-header">
             <section class="post-full-meta">
                 <time  class="post-full-meta-date" datetime="{{ date_xml(page.date) }}" itemprop="datePublished">
-                    {{ date(page.date, 'YYYY-MM-D') }}
+                    {{ date(page.date, 'YYYY-MM-DD') }}
                 </time>
-                {% if page.categories %}
+                {% if page.tags %}
+                {% for tag in page.tags %}
                 <span class="date-divider">/</span>
-                {% for cate in page.categories %}
-                <a href="{{ url_for(cate.path) }}">{{ cate.name }}</a>&nbsp;&nbsp;
+                <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
                 {% endfor %}
                 {% endif %}
             </section>
@@ -26,6 +26,40 @@
                     {{ page.content }}
                 </div>
             </section>
+
+            {# Show Author Details 
+            <footer class="post-full-footer">
+                <section class="author-card">
+                    <span class="avatar-wrapper">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+                    </span>
+                    <section class="author-card-content">
+                        <h4 class="author-card-name"><a href="/author/anthony/">Anthony Ison</a></h4>
+                        <p>Read <a href="/author/anthony/">more posts</a> by this author.</p>
+                    </section>
+                </section>
+                <div class="post-full-footer-right">
+                    <a class="author-card-button" href="/author/anthony/">Read More</a>
+                </div>
+            </footer>
+            #}
+
+            {# Show Disqus Comments #}
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = "{{ config.url }}{{ config.root }}{{ page.path }}";  
+	this.page.identifier = "{{ page.identifier }}"
+};
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://{{ config.disqus_shortname }}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+            </section>        
         </article>
     </div>
 
