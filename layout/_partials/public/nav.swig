@@ -23,13 +23,13 @@
         </ul> 
     </div>
     {% if theme.local_search %}
-    <div class="search-button">
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
     </div>
     {% endif %} 
     <div class="site-nav-right">
         {% if theme.local_search %}
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+        <a href="#search" class="search-button">Search ...</a>
         {% endif %} 
         {% include 'social.swig' %}
     </div>

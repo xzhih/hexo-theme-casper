@@ -1,0 +1,130 @@
+:root {
+    --body-bg: #F4F8FB;
+    --body-color: #3C484E;
+    --post-bg: #FFFFFF;
+
+    --H-title: #090A0B;
+
+    --white-normal: #FFFFFF;
+
+    --post-card-link: #15171A;
+    --post-card-bg: #FFFFFF;
+
+    --post-full-content: #FFFFFF;
+
+    --read-next-card-text: #FFFFFF;
+
+    --search-input-bg: rgba(0, 0, 0, 0.04);
+
+    --page-nav--hover: #3C484E;
+
+    --floating-header-bg: rgba(255, 255, 255, .95);
+
+    --toc-btn: #f6f8fa;
+    --toc-btn-hover: #F0F2F3;
+
+    --color-1: #f8f8f8;
+    --color-2: #2c3e50;
+    --pre-color: #525252;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg: #323336;
+        --body-color: #dfdfdf;
+
+        --H-title: #dfdfdf;
+        --white-normal: #dfdfdf;
+
+        --post-bg: #323336;
+
+        --post-card-link: #dfdfdf;
+        --post-card-bg: #222;
+
+        --post-full-content: #323336;
+
+        --page-nav--hover: #dfdfdf;
+
+        --read-next-card-text: #dfdfdf;
+
+        --search-input-bg: rgba(255, 255, 255, 0.04);
+
+        --floating-header-bg: rgba(34, 34, 34, .95);
+
+        --toc-btn: #222;
+        --toc-btn-hover: #2B2B2B;
+        
+        --color-1: #222;
+        --color-2: #dfdfdf;
+        --pre-color: #dfdfdf;
+    }
+
+    .b-lazy.b-loaded {
+        opacity: .85;
+    }
+
+    .b-lazy.b-loaded:hover {
+        opacity: 1;
+    }
+
+    .read-next-card:before {
+        background: linear-gradient(135deg, rgba(33, 37, 41, .8), rgba(33, 37, 41, .7)) ;
+    }
+
+    .search-overlay-close:before,
+    .search-overlay-close:after {
+        background: #FFFFFF ;
+    }
+
+    .search-overlay {
+        background: #222 ;
+    }
+
+    .tags-postTags li {
+        background: #222 
+    }
+
+    .tags-postTags li:hover {
+        background: #2B2B2B ;
+    }
+
+    .prev-post,
+    .next-post {
+        color: #dfdfdf 
+    }
+
+    .v input,
+    .v textarea {
+        color: #dfdfdf !important
+    }
+
+    .vpreview,
+    .v code,
+    .v pre {
+        background-color: #222 !important;
+    }
+
+    .v .vlist .vcard .vhead .vsys {
+        background: unset !important;
+    }
+
+    .v .vlist .vcard .vh,
+    .v .vlist .vcard .vquote {
+        border: none !important
+    }
+
+    .v .vlist {
+        background: #111;
+        padding: 0 1.5rem;
+        border-radius: 4px
+    }
+
+    .v .vlist .vcard .vcontent.expand:before {
+        background: linear-gradient(180deg,rgba(82, 82, 82, 0),rgba(50, 51, 54, .9))!important
+    }
+
+    .v .vlist .vcard .vcontent.expand:after {
+        background: rgba(50, 51, 54, .9)!important
+    }
+
+}

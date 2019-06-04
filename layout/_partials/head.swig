@@ -20,26 +20,19 @@
 {% set body_class = 'post-template' %}
 {% endif %}
 <head>
-	{# {{ css('css/screen') }}
-	{{ css('css/style') }}
-	{{ css('css/markdown') }}
-	{{ css('css/highlight') }} #}
-	
-	{{ css('css/allinone.min') }}
-
-	{% if theme.googleAnalytics %}
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', '{{ theme.GA_TRACKING_ID }}');
-	</script>
-	{% endif %}
-
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="preconnect" href="//pic.zhih.me">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn1.lncld.net">
+	<link rel="preconnect" href="//unpkg.com">
+	<link rel="preconnect" href="//app-router.leancloud.cn">
+	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
+	<link rel="preconnect" href="//gravatar.loli.net">
+	<link rel="preload" href="https://pic.zhih.me/blog/header.jpg" as="image">
 
 	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
 
@@ -82,4 +75,24 @@
 	<meta property="article:author" content="{{ config.author }}">
 	<meta property="article:published_first" content="{{ config.title }}, {{ url_for(page.path) }}" />
 	{% endif %}
+
+	{# {{ css('css/screen') }}
+	{{ css('css/style') }}
+	{{ css('css/markdown') }}
+	{{ css('css/highlight') }}
+	{{ css('css/darkmode') }} #}
+	
+	{{ css('css/allinonecss.min') }}
+
+	{% if theme.googleAnalytics %}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{{ theme.GA_TRACKING_ID }}');
+	</script>
+	{% endif %}
+	
+	{% include "public/json-ld.swig" %}
 </head>

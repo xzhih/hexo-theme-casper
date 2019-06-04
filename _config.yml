@@ -44,6 +44,9 @@ widgets:
   tagcloud: true
   # This is a simple theme, I think 3 is enough.
 
+# Post page fload header
+floadheader: false
+
 # Gallery
 # https://github.com/sachinchoolur/lightgallery.js
 lightgallery: true
@@ -58,7 +61,7 @@ local_search: true
 
 # Comment
 # https://valine.js.org
-comment: false
+comment: true
 valine:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki 
   verify: false # Verification code

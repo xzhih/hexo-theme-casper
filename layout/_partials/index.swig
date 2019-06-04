@@ -1,6 +1,6 @@
 {# 首页、归档、分类、标签 #}
 {% macro tpl() %}
-<main id="site-main" class="site-main outer" role="main">
+<div id="site-main" class="site-main outer" role="main">
 	<div class="inner">
 		<div class="post-feed">
 			{% for post in page.posts %}
@@ -19,23 +19,26 @@
 								{{ cate.name }}
 								{% endfor %}| 
 								{% endif %}
-								<time datetime="{{ date_xml(post.date) }}" itemprop="datePublished">
+								<time datetime="{{ date_xml(post.date) }}">
 									{{ date(post.date, null) }}
 								</time>
 							</span>
 							<h2 class="post-card-title">{{ post.title }}</h2>
 						</header>
-						<section class="post-card-excerpt">
+						<div class="post-card-excerpt">
 							<p>
 								{% set num = 100 %}
 								{% if not post.cover_img %}
 								{% set num = 240 %}
 								{% endif %}
+								{% if loop.first %}
+								{% set num = 80 %}
+								{% endif %}
 								{% set content = post.content | striptags %}
 								{{ content.substring(0, num) }}
 								{% if content.length > num %}...{% endif %}
 							</p>
-						</section>
+						</div>
 					</a>
 					<footer class="post-card-meta">
 						<div class="author-list">
@@ -62,17 +65,18 @@
 			{% endfor %}
 		</div>
 	</div>
+</div>
 
-	{# 显示页号 #}
-	{% if config.index_generator.per_page !== 0 %}
+{# 显示页号 #}
+{% if config.index_generator.per_page !== 0 %}
+<div class="outer">
 	<nav class="pagination">
 		{% if page.total > 1 %}
 		<nav class="page-nav">
-			{{ paginator({prev_text: '← Prev', next_text: 'Next →'}) }}
+			{{ paginator({prev_text: '← PREV', next_text: 'NEXT →'}) }}
 		</nav>
 		{% endif %}
 	</nav>
-	{% endif %}
-	
-</main>
+</div>
+{% endif %}
 {% endmacro %}

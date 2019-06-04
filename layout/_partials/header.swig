@@ -24,7 +24,7 @@
 </header>
 {% else %}
 {# 文章页只显示导航 #}
-<header class="site-header outer" style="z-index: 999">
+<header class="site-header post-site-header outer">
     <div class="inner">
         {% include 'public/nav.swig' %}
     </div>

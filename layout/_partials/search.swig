@@ -1,7 +1,7 @@
 {# search #}
 
 {% if theme.local_search %}
-<div id="search" class="search-overlay subscribe-overlay">
+<div id="search" class="search-overlay">
     <div class="search-form">
         {% if theme.favicon %}
         <img class="search-overlay-logo" src="{{ theme.favicon }}" alt="{{ config.title }}">

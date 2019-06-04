@@ -10,8 +10,8 @@
     <span class="floating-header-divider">&mdash;</span>
     <div class="floating-header-title">{{ page.title }}</div>
     <progress class="progress" value="0">
-        <div class="progress-container">
+        <span class="progress-container">
             <span class="progress-bar"></span>
-        </div>
+        </span>
     </progress>
 </div>
