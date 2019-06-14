@@ -1,5 +1,5 @@
 {# header 部分, 控制页面中显示头部图像、标题 #}
-{# 非文章页面 header 显示 cover_img #}
+{# 非文章页面 header 显示 image #}
 {% if not is_post() %}
 <header class="site-header outer {% if !theme.header_image %}no-cover"{% else %}" style="background-image: url({{ theme.header_image }})"{% endif %}>
     <div class="inner">

@@ -42,6 +42,9 @@
 		gtag('config', '{{ theme.GA_TRACKING_ID }}');
 	</script>
 	{% endif %}
+	{% if theme.momently %}
+	<script src="//s3-us-west-2.amazonaws.com/momently-static/loader/{{theme.momentlyId}}_momently.js" name="momently-script"></script>
+	{% endif %}
 
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -73,7 +76,7 @@
 	{% endif %}
 
 	{% if theme.rss %}
-	{{ feed_tag(theme.rss, [{title:config.title}])  }}
+	<link rel="alternate" type="application/rss+xml" href="{{url_for(theme.rss)}}" title="{{config.title}}">
 	{% endif %}
 
 	<meta property="og:site_name" content="{{ config.title }}">
@@ -81,7 +84,7 @@
 	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}">
 	<meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
-	<meta property="og:image" content="{{ config.url }}{{ config.root }}{% if is_post() %}{{ page.cover_img }}{% endif %}">
+	<meta property="og:image" content="{{ config.url }}{{ config.root }}{% if is_post() %}{{ page.image }}{% endif %}">
 	<meta name="twitter:card" content="summary_large_image">
 
 	{% if is_post() %}

@@ -71,7 +71,7 @@ git pull
 Add to `scaffolds/post.md`, 
 
 ```
-cover_img:     # show in home page, the post card header
+image:     # show in home page, the post card header
 feature_img:   # show in post page, content header
 description: 
 keywords: 

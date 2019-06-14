@@ -4,10 +4,10 @@
 	<div class="inner">
 		<div class="post-feed">
 			{% for post in page.posts %}
-			<article class="post-card post {% if not post.cover_img %} no-image {% endif %}">
-				{% if post.cover_img %}
+			<article class="post-card post {% if not post.image %} no-image {% endif %}">
+				{% if post.image %}
 				<a class="post-card-image-link" title="{{ post.title }}" href="{{ url_for(post.path) }}">
-					<div class="post-card-image b-lazy" data-src="{{ post.cover_img }}"></div>
+					<div class="post-card-image b-lazy" data-src="{{ post.image }}"></div>
 				</a>
 				{% endif %}
 				<div class="post-card-content">
@@ -28,7 +28,7 @@
 						<section class="post-card-excerpt">
 							<p>
 								{% set num = 160 %}
-								{% if not post.cover_img %}
+								{% if not post.image %}
 								{% set num = 340 %}
 								{% endif %}
 								{% set content = post.content | striptags %}

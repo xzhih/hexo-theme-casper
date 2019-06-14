@@ -20,6 +20,11 @@
         {% include "icons/twitter.svg" %}
     </a>
     {% endif %}
+    {% if theme.social.linkedin %}
+    <a class="social-link" title="linkedin" href="{{ theme.social.linkedin }}" target="_blank" rel="noopener">
+        {% include "icons/linkedin.svg" %}
+    </a>
+    {% endif %}
     {% if theme.social.telegram %}
     <a class="social-link" title="telegram" href="{{ theme.social.telegram }}" target="_blank" rel="noopener">
         {% include "icons/telegram.svg" %}

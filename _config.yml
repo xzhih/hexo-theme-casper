@@ -1,5 +1,5 @@
 # Config
-rss: https://isonaj.github.io/atom.xml           # link
+rss: /rss.xml           # link
 favicon: /images/Anthony-Square-Color.png
 blog_logo: #/images/Anthony-Square-Color.png
 header_image: /images/imleedh-ali-677414-unsplash.jpg
@@ -25,11 +25,12 @@ social:
   weibo: 
   github: https://github.com/isonaj
   twitter: https://twitter.com/isonaj
+  linkedin: https://www.linkedin.com/in/anthony-ison-4a759a28/
   facebook: 
   telegram:
   bilibili: 
   youtube: https://www.youtube.com/channel/UC4_sgo322GFudAjSXbyQdmw
-  rss: https://feedly.com/i/subscription/feed/https://isonaj.github.io/atom.xml
+  rss: https://anthonyison.com/rss.xml
   # You only can use that I have added, I will keep adding
 
 # Footer Links
@@ -83,5 +84,8 @@ baidu: false
 # Google Analytics
 googleAnalytics: true
 GA_TRACKING_ID: UA-131919757-1
+
+momently: true
+momentlyId: 1mJ1TwAKARA
 
 disqus_shortname: anthonyison
