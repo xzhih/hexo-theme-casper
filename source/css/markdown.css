@@ -49,12 +49,7 @@ em {
     margin-left: 20px;
 }
 
-.markdown-body h1 {
-    margin: 0 0 1.2em;
-}
-
 .markdown-body h2 {
-    margin-top: 2em;
     margin-bottom: 1em;
     padding-bottom: 0.6em;
     border-bottom: 1px solid #ddd;
