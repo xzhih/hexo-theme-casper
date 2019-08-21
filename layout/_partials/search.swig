@@ -4,7 +4,9 @@
 <div id="search" class="search-overlay">
     <div class="search-form">
         {% if theme.favicon %}
-        <img class="search-overlay-logo" src="{{ theme.favicon }}" alt="{{ config.title }}">
+        <div class="search-overlay-logo">
+        	<img src="{{ theme.favicon }}" alt="{{ config.title }}">
+        </div>
         {% endif %}
         <input id="local-search-input" class="search-input" type="text" name="search" placeholder="{{ __('search') }} ...">
         <a class="search-overlay-close" href="#"></a>

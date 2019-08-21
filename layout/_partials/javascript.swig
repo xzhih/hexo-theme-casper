@@ -1,12 +1,30 @@
 {# service workers #}
 {% if theme.service_workers %}
-<script>"serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").then(function(e){console.log("ServiceWorker registration successful with scope: ",e.scope)}).catch(function(e){console.log("ServiceWorker registration failed: ",e)})});</script>
+<script>
+    "serviceWorker"in navigator&&window.addEventListener("load",function(){
+        navigator.serviceWorker.register("/sw.js")
+            .then(function(e){
+                console.log("ServiceWorker registration successful with scope: ",e.scope)
+            })
+            .catch(function(e){
+                console.log("ServiceWorker registration failed: ",e)
+            })
+    });
+</script>
 {% else %}
 {# 卸载时为 unregister #}
-<script>if(window.navigator && navigator.serviceWorker) {navigator.serviceWorker.getRegistrations().then(function(registrations) {for(let registration of registrations) {registration.unregister()}})}</script>
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }
+        })
+    }
+</script>
 {% endif %}
 
-<script async src="{{ url_for('/js/allinone.min.js') }}" id="scriptLoad"></script>
+<script id="scriptLoad" src="{{ url_for('/js/allinone.min.js') }}" async></script>
 
 {# 非文章页懒加载 #}
 {% if !is_post() %}
@@ -49,10 +67,9 @@
 
 {# Valine 评论 #}
 {% if is_post() and theme.comment %}
-<script async src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script async src="https://unpkg.com/valine@1.3.4/dist/Valine.min.js"></script>
+<script id="valineScript" src='//unpkg.com/valine/dist/Valine.min.js' async></script>
 <script>
-    window.addEventListener("load", function() {
+    document.getElementById('valineScript').addEventListener("load", function() {
         new Valine({
             el: '#comment' ,
             verify: {{ theme.valine.verify }},
@@ -62,7 +79,7 @@
             placeholder: '{{ theme.valine.placeholder }}',
             pageSize: {{ theme.valine.pageSize }},
             avatar: '{{ theme.valine.avatar }}',
-            visitor: true,
+            visitor: {{ theme.valine.visitor }}
         })
     });
 </script>

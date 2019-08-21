@@ -1,7 +1,6 @@
 {% if is_post() %}
 <link rel="canonical" href="{{ page.permalink }}"/>
-
-{# <script type="application/ld+json">
+<script type="application/ld+json">
 	[
 	{
 		"@context": "http://schema.org",
@@ -34,13 +33,11 @@
 		]
 	}
 	]
-</script> #}
+</script>
 {% endif %}
 
 {% if is_home() %}
-<link rel="canonical" href="{{ url.replace('index.html','') }}"/>
-
-{# <script type="application/ld+json">
+<script type="application/ld+json">
 	{
 		"@context":"http://schema.org",
 		"@type":"Blog",
@@ -63,5 +60,5 @@
 		"mainEntityOfPage": "{{ post.permalink }}",
 		"articleBody": "{{ truncate(post.content | striptags,{length: 100}) }}"}{% endfor %}]
 	}
-</script> #}
+</script>
 {% endif %}

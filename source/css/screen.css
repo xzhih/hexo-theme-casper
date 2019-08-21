@@ -13,6 +13,7 @@ html {
 body,
 html {
 	overflow-x: hidden;
+	/*scroll-behavior:smooth;*/
 }
 
 body {
@@ -522,6 +523,8 @@ h6 {
 }
 
 .author-profile-image {
+	width: 30px;
+	height: 30px;
 	display: block;
 
 	border-radius: 100%;

@@ -44,6 +44,7 @@ When I was searching `beautiful hexo themes`, I saw the old version of Casper po
 - Chrome Nav Color
 - Baidu Push Google Analytics
 - Service Worker
+- MacOS、IOS and Android dark mode (Safari、Chrome)
 
 ## Installation
 
@@ -161,6 +162,7 @@ valine:
   placeholder: Just go go # comment box placeholder
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
+  visitor: true # page view record
 
 # PWA
 # you need create a manifest.json file in hexo's source folder

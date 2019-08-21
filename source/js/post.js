@@ -3,9 +3,7 @@ var scroll = new SmoothScroll('.toc-btn, .toc-link', {
     speed: 1000,
     easing: 'easeInOutCubic',
     speedAsDuration: true,
-    clip: true,
-    updateURL: true,
-    popstate: true
+    clip: true
 })
 
 // 文章页面顶部进度条
@@ -55,16 +53,28 @@ if (document.querySelector('.toc-bar')) {
     var tocMain = document.querySelector('.toc-main')
     var tocWidth = window.getComputedStyle(tocMain).width.replace("px","")
 
-    if (window.screen.width >= '768' ) {
+    if (document.body.clientWidth >= '768' ) {
         tocBar.style.right = -tocWidth + 'px'
     }
 
+    window.addEventListener("resize", function(){
+        var newTocWidth = window.getComputedStyle(tocMain).width.replace("px","")
+        tocBar.removeAttribute("style")
+        if (document.body.clientWidth >= '768' ) {
+            tocBar.style.right = -newTocWidth + 'px'
+        } else {
+            tocBar.style.top = '100%'
+        }
+    });
+
+
     tocSwitch.addEventListener('click', function(){
+        var newTocWidth = window.getComputedStyle(tocMain).width.replace("px","")
 
         window.requestAnimationFrame(function () {
             if (tocOpen.classList.contains('hide')) {
-                if (window.screen.width >= '768' ) {
-                    tocBar.style.right = -tocWidth + 'px'
+                if (document.body.clientWidth >= '768' ) {
+                    tocBar.style.right = -newTocWidth + 'px'
                 } else {
                     // 隐藏 toc
                     tocBar.style.top = '100%'
@@ -72,7 +82,7 @@ if (document.querySelector('.toc-bar')) {
                 tocClose.classList.add('hide')
                 tocOpen.classList.remove('hide')
             } else {
-                if (window.screen.width >= '768' ) {
+                if (document.body.clientWidth >= '768' ) {
                     tocBar.style.right = 0
                 } else {
                     // 显示 toc
@@ -89,7 +99,7 @@ if (document.querySelector('.toc-bar')) {
     tocItem.forEach(function(toc) {
         toc.addEventListener('click', function(){
             window.requestAnimationFrame(function () {
-                if (window.screen.width < '768' ) {
+                if (document.body.clientWidth < '768' ) {
                     tocBar.style.top = '100%'
                     tocClose.classList.add('hide')
                     tocOpen.classList.remove('hide')

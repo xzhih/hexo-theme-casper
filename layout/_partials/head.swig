@@ -22,7 +22,6 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link rel="preconnect" href="//pic.zhih.me">
 	<link rel="preconnect" href="//www.googletagmanager.com">
 	<link rel="preconnect" href="//zz.bdstatic.com">
 	<link rel="preconnect" href="//sp0.baidu.com">
@@ -32,7 +31,6 @@
 	<link rel="preconnect" href="//app-router.leancloud.cn">
 	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
 	<link rel="preconnect" href="//gravatar.loli.net">
-	<link rel="preload" href="https://pic.zhih.me/blog/header.jpg" as="image">
 
 	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
 
@@ -94,5 +92,5 @@
 	</script>
 	{% endif %}
 	
-	{% include "public/json-ld.swig" %}
+	{# {% include "public/json-ld.swig" %} #}
 </head>

@@ -178,7 +178,8 @@ em {
     background-color: #efefef;
 }
 
-.markdown-body p.tip,
+.markdown-body p.error,
+.markdown-body p.warn,
 .markdown-body p.success {
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
@@ -190,7 +191,8 @@ em {
     border-top-right-radius: 2px;
 }
 
-.markdown-body p.tip:before,
+.markdown-body p.error:before,
+.markdown-body p.warn:before,
 .markdown-body p.success:before {
     position: absolute;
     top: 14px;
@@ -206,23 +208,34 @@ em {
     font-size: 14px;
 }
 
-.markdown-body p.tip code,
+.markdown-body p.error code,
+.markdown-body p.warn code,
 .markdown-body p.success code {
     background-color: #efefef;
 }
 
-.markdown-body p.tip em,
+.markdown-body p.error em,
+.markdown-body p.warn em,
 .markdown-body p.success em {
     color: #34495e;
 }
 
-.markdown-body p.tip {
+.markdown-body p.error {
     border-left-color: #f66;
 }
 
-.markdown-body p.tip:before {
-    content: "!";
+.markdown-body p.error:before {
+    content: "\2717";
     background-color: #f66;
+}
+
+.markdown-body p.warn {
+    border-left-color: #ff9900;
+}
+
+.markdown-body p.warn:before {
+    content: "!";
+    background-color: #ff9900;
 }
 
 .markdown-body p.success {
@@ -230,6 +243,6 @@ em {
 }
 
 .markdown-body p.success:before {
-    content: "√";
+    content: "\2713";
     background-color: #42b983;
 }
