@@ -2,7 +2,7 @@ code,
 pre {
     font-family: "Roboto Mono", Monaco, courier, monospace;
     font-size: 0.9em;
-    background-color: #f8f8f8;
+    background-color: var(--color-1);
     -webkit-font-smoothing: initial;
     -moz-osx-font-smoothing: initial;
 }
@@ -21,7 +21,6 @@ kbd {
     background: #eee;
     color: #555;
     border-radius: 3px;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -77,7 +76,7 @@ em {
 .markdown-body strong {
     margin-bottom: 1em;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-2);
     margin-top: 1.5em
 }
 
@@ -90,7 +89,6 @@ em {
     position: relative;
     z-index: 1;
     text-align: left;
-    word-spacing: 0.05em;
 }
 
 .markdown-body ul,
@@ -172,7 +170,7 @@ em {
 
 .markdown-body>table th,
 .markdown-body>table tr:nth-child(2n) {
-    background-color: #f8f8f8;
+    background-color: var(--color-1);
 }
 
 .markdown-body>table th code,
@@ -180,19 +178,21 @@ em {
     background-color: #efefef;
 }
 
-.markdown-body p.tip,
+.markdown-body p.error,
+.markdown-body p.warn,
 .markdown-body p.success {
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: #f8f8f8;
+    background-color: var(--color-1);
     position: relative;
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
 }
 
-.markdown-body p.tip:before,
+.markdown-body p.error:before,
+.markdown-body p.warn:before,
 .markdown-body p.success:before {
     position: absolute;
     top: 14px;
@@ -208,23 +208,34 @@ em {
     font-size: 14px;
 }
 
-.markdown-body p.tip code,
+.markdown-body p.error code,
+.markdown-body p.warn code,
 .markdown-body p.success code {
     background-color: #efefef;
 }
 
-.markdown-body p.tip em,
+.markdown-body p.error em,
+.markdown-body p.warn em,
 .markdown-body p.success em {
     color: #34495e;
 }
 
-.markdown-body p.tip {
+.markdown-body p.error {
     border-left-color: #f66;
 }
 
-.markdown-body p.tip:before {
-    content: "!";
+.markdown-body p.error:before {
+    content: "\2717";
     background-color: #f66;
+}
+
+.markdown-body p.warn {
+    border-left-color: #ff9900;
+}
+
+.markdown-body p.warn:before {
+    content: "!";
+    background-color: #ff9900;
 }
 
 .markdown-body p.success {
@@ -232,6 +243,6 @@ em {
 }
 
 .markdown-body p.success:before {
-    content: "√";
+    content: "\2713";
     background-color: #42b983;
 }

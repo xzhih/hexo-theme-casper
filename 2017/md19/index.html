@@ -8,14 +8,17 @@
 
 
 <head>
-	
-	
-	<link rel="stylesheet" href="/hexo-theme-casper/css/allinone.min.css">
-
-	
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn1.lncld.net">
+	<link rel="preconnect" href="//unpkg.com">
+	<link rel="preconnect" href="//app-router.leancloud.cn">
+	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
+	<link rel="preconnect" href="//gravatar.loli.net">
 
 	<title>Hexo-Theme-Casper | DEMO-Title</title>
 
@@ -23,10 +26,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Xzhih">
-	<meta name="description" content="">
+	<meta name="description" content>
 
 	
-	<meta name="keywords" content="">
+	<meta name="keywords" content>
 	
 
 	
@@ -46,13 +49,21 @@
 	<meta property="og:site_name" content="DEMO-Title">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Hexo-Theme-Casper | DEMO-Title">
-	<meta property="og:description" content="">
+	<meta property="og:description" content>
 	<meta property="og:url" content="https://xzhih.github.io/hexo-theme-casper/2017/md19/">
 
 	
 	<meta property="article:published_time" content="2017-11-16T03:11:00+08:00"> 
 	<meta property="article:author" content="Xzhih">
 	<meta property="article:published_first" content="DEMO-Title, /hexo-theme-casper/2017/md19/">
+	
+
+	
+	
+	<link rel="stylesheet" href="/hexo-theme-casper/css/allinonecss.min.css">
+
+	
+	
 	
 </head>
 <body class="post-template">
@@ -62,7 +73,7 @@
 
 
 
-<header class="site-header outer" style="z-index: 999">
+<header class="site-header post-site-header outer">
     <div class="inner">
         
 <nav class="site-nav"> 
@@ -87,13 +98,13 @@
         </ul> 
     </div>
     
-    <div class="search-button">
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
     </div>
      
     <div class="site-nav-right">
         
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+        <a href="#search" class="search-button">Search ...</a>
          
         
 <div class="social-links">
@@ -129,11 +140,11 @@
 </header>
 
 
-<main id="site-main" class="site-main outer" role="main">
+<div id="site-main" class="site-main outer" role="main">
     <div class="inner">
         <header class="post-full-header">
-            <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2017-11-15T19:41:24.000Z" itemprop="datePublished">
+            <div class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2017-11-15T19:41:24.000Z">
                     2017-11-16
                 </time>
                 
@@ -142,16 +153,16 @@
                 <a href="/hexo-theme-casper/categories/guide/">guide</a>&nbsp;&nbsp;
                 
                 
-            </section>
+            </div>
             <h1 class="post-full-title">Hexo-Theme-Casper</h1>
         </header>
-        <article class="post-full ">
+        <div class="post-full ">
             
             <figure class="post-full-image" style="background-image: url(https://i.loli.net/2017/11/26/5a19c04890c51.jpg)">
             </figure>
             
-            <section class="post-full-content">
-                <div id="lightgallery" class="markdown-body">
+            <div class="post-full-content">
+                <article id="lightgallery" class="markdown-body">
                     <p>A new <a href="https://github.com/TryGhost/Casper" target="_blank" rel="noopener">Ghost’s Casper theme</a> port to <a href="hexo.io">Hexo</a>.</p>
 <p>This is a simple and beautiful hexo theme.</p>
 <p>When I was searching <code>beautiful hexo themes</code>, I saw the old version of Casper port to Hexo, but the latest not. So I decided that I would port it.</p>
@@ -177,20 +188,26 @@
 <h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>Edit <code>themes/hexo-casper/_config.yml</code> and set up what you want to show</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># config</span></span><br><span class="line"><span class="attr">rss:</span>            <span class="comment"># link</span></span><br><span class="line"><span class="attr">favicon:</span>        <span class="comment"># link</span></span><br><span class="line"><span class="attr">blog_logo:</span>      <span class="comment"># link</span></span><br><span class="line"><span class="attr">header_image:</span> <span class="string">//demo.ghost.io/content/images/2017/07/blog-cover.jpg</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># menu</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  About:</span> <span class="string">/about</span></span><br><span class="line"><span class="attr">  Archives:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="comment"># you can add here</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># author</span></span><br><span class="line"><span class="attr">author_image:</span>   <span class="comment"># link</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line"><span class="attr">  facebook:</span> <span class="attr">https://www.facebook.com</span></span><br><span class="line"><span class="attr">  twitter:</span> <span class="attr">https://www.twitter.com</span></span><br><span class="line">  <span class="comment"># You only can use that I have added, I will keep adding</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># widget</span></span><br><span class="line"><span class="attr">widgets:</span></span><br><span class="line"><span class="attr">  recent_posts:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  category:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  tagcloud:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># This is a simple theme, I think 3 is enough.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># gallery</span></span><br><span class="line"><span class="comment"># https://github.com/sachinchoolur/lightgallery.js</span></span><br><span class="line"><span class="attr">lightgallery:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <h2 id="Copyright-amp-License"><a href="#Copyright-amp-License" class="headerlink" title="Copyright &amp; License"></a><a href="https://github.com/TryGhost/Casper/blob/master/LICENSE" target="_blank" rel="noopener">Copyright &amp; License</a></h2>
-                </div>
-            </section>
-        </article>
+                </article>
+                <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/hexo-theme-casper/tags/casper/" rel="tag"># casper</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
     </div>
 
     
-    <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
         <a class="prev-post" title="Hexo-Theme-Casper" href="/hexo-theme-casper/2017/md11/">
             ← Hexo-Theme-Casper
         </a>
         
-        <span class="prev-next-post">•</span>
+        <span class="prev-next-post">·</span>
         
         <a class="next-post" title="Hexo-Theme-Casper" href="/hexo-theme-casper/2017/md32/">
             Hexo-Theme-Casper →
@@ -199,7 +216,11 @@
     </nav>
 
     
-</main>
+    <div class="inner">
+        <div id="comment"></div>
+    </div>
+    
+</div>
 
 <div class="toc-bar">
     <div class="toc-btn-bar">
@@ -253,14 +274,16 @@
       
       
       <li>
-        <a href="/hexo-theme-casper/2018/chinese-test/">中文显示测试</a>
+        <a href="/hexo-theme-casper/2018/hanwentest/">TEST</a>
       </li>
       
       
       
       <li>
-        <a href="/hexo-theme-casper/2017/I Have a Dream/">I Have a Dream</a>
+        <a href="/hexo-theme-casper/2018/chinese-test/">中文显示测试</a>
       </li>
+      
+      
       
       
       
@@ -311,13 +334,11 @@
             
 
 <article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
-    <header class="read-next-card-header" style="padding-bottom: 20px">
+    <header class="read-next-card-header tagcloud-card">
         <h3 class="read-next-card-header-title">Categories</h3>
     </header>
     <div class="read-next-card-content">
-        <ul>
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-theme-casper/categories/Speeches/">Speeches</a></li><li class="category-list-item"><a class="category-list-link" href="/hexo-theme-casper/categories/guide/">guide</a></li><li class="category-list-item"><a class="category-list-link" href="/hexo-theme-casper/categories/教程/">教程</a></li></ul>
-        </ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-theme-casper/categories/Speeches/">Speeches</a></li><li class="category-list-item"><a class="category-list-link" href="/hexo-theme-casper/categories/guide/">guide</a></li><li class="category-list-item"><a class="category-list-link" href="/hexo-theme-casper/categories/教程/">教程</a></li></ul>
     </div>
 </article>
 
@@ -327,11 +348,11 @@
             
 
 <article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
-	<header class="read-next-card-header" style="padding-bottom: 20px">
+	<header class="read-next-card-header tagcloud-card">
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
-		<a href="/hexo-theme-casper/tags/casper/" style="font-size: 19px;">casper</a> <a href="/hexo-theme-casper/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/hexo-theme-casper/tags/howto/" style="font-size: 19px;">howto</a> <a href="/hexo-theme-casper/tags/poem/" style="font-size: 24px;">poem</a>
+		<a href="/hexo-theme-casper/tags/casper/" style="font-size: 20.67px;">casper</a> <a href="/hexo-theme-casper/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/hexo-theme-casper/tags/howto/" style="font-size: 17.33px;">howto</a> <a href="/hexo-theme-casper/tags/poem/" style="font-size: 24px;">poem</a>
 	</div>
 </article>
 
@@ -345,10 +366,12 @@
 
 
 
-<div id="search" class="search-overlay subscribe-overlay">
+<div id="search" class="search-overlay">
     <div class="search-form">
         
-        <img class="search-overlay-logo" src="https://i.loli.net/2017/11/26/5a19c0b50432e.png" alt="DEMO-Title">
+        <div class="search-overlay-logo">
+        	<img src="https://i.loli.net/2017/11/26/5a19c0b50432e.png" alt="DEMO-Title">
+        </div>
         
         <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
         <a class="search-overlay-close" href="#"></a>
@@ -356,65 +379,50 @@
     <div id="local-search-result"></div>
 </div>
 
-
 <footer class="site-footer outer">
 	<div class="site-footer-content inner">
-		<section class="copyright">
-			<a href="/hexo-theme-casper/" title="DEMO-Title">DEMO-Title</a>
-			&copy; 2018
-		</section>
+		<div class="copyright">
+			<a href="/hexo-theme-casper/" title="DEMO-Title">DEMO-Title &copy; 2019</a>
+			
+				
+    		
+		</div>
 		<nav class="site-footer-nav">
 			
-            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
-        </nav>
-    </div>
+			<a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+		</nav>
+	</div>
 </footer>
 	
 
 
 <script>
     if(window.navigator && navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations()
-        .then(function(registrations) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
             for(let registration of registrations) {
-                registration.unregister();
+                registration.unregister()
             }
-        });
+        })
     }
 </script>
 
 
+<script id="scriptLoad" src="/hexo-theme-casper/js/allinone.min.js" async></script>
 
 
 
 
 
-<div class="floating-header">
-	<div class="floating-header-logo">
-        <a href="/hexo-theme-casper/" title="DEMO-Title">
-			
-                <img src="https://i.loli.net/2017/11/26/5a19c0b50432e.png" alt="DEMO-Title icon">
-			
-            <span>DEMO-Title</span>
-        </a>
-    </div>
-    <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Hexo-Theme-Casper</div>
-    <progress class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
-        </div>
-    </progress>
-</div>
+
+<script>
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        var bLazy = new Blazy()
+    })
+</script>
 
 
 
-
-
-<script src="/hexo-theme-casper/js/mix/post-lazy-local.min.js"></script>
-
-<script>;(function() {var bLazy = new Blazy()})();</script>
 
 
 
@@ -430,12 +438,33 @@
 
 
 
+<script id="valineScript" src="//unpkg.com/valine/dist/Valine.min.js" async></script>
+<script>
+    document.getElementById('valineScript').addEventListener("load", function() {
+        new Valine({
+            el: '#comment' ,
+            verify: false,
+            notify: false,
+            appId: '',
+            appKey: '',
+            placeholder: 'Just go go',
+            pageSize: 10,
+            avatar: 'mm',
+            visitor: 
+        })
+    });
+</script>
 
 
 
 
 
-<script>searchFunc("/hexo-theme-casper/")</script>
+<script>
+    document.getElementById('scriptLoad').addEventListener('load', function(){
+        searchFunc("/hexo-theme-casper/")
+    });
+</script>
+
 
 
 

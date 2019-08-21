@@ -3,7 +3,6 @@
 * @Date:   2018-11-04 23:25:09
 * @Last Modified by:   xzhih
 * @Last Modified time: 2018-12-04 04:43:06
-* 在非 service workers 场景下
 */
 
 // 保存搜索数据
