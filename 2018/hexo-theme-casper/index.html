@@ -162,7 +162,7 @@
             </figure>
             
             <div class="post-full-content">
-                <article id="lightgallery" class="markdown-body">
+                <article id="photoswipe" class="markdown-body">
                     <p>A new <a href="https://github.com/TryGhost/Casper" target="_blank" rel="noopener">Ghost’s Casper theme</a> port to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>.</p>
 <p>DEMO <a href="https://xzhih.github.io/hexo-theme-casper/">here</a></p>
 <p>My Blog <a href="https://zhih.me/" target="_blank" rel="noopener">zhih.me</a></p>
@@ -179,7 +179,7 @@
 <li><a href="#copyright--license">Copyright &amp; License</a></li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<p><img alt="hexo-theme-casper.jpg" class="post-img b-lazy" href="https://i.loli.net/2018/11/05/5be0665656ea9.jpg" data-src="https://i.loli.net/2018/11/05/5be0665656ea9.jpg"></p>
+<p><img alt="hexo-theme-casper.jpg" class="post-img b-lazy" data-img="https://i.loli.net/2018/11/05/5be0665656ea9.jpg" data-index="0" data-src="https://i.loli.net/2018/11/05/5be0665656ea9.jpg"></p>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
 <li>Posts cover image</li>
 <li>Posts feature image</li>
@@ -264,6 +264,76 @@
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration"><span class="toc-text">Configuration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Search"><span class="toc-text">Local Search</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Copyright-amp-License"><span class="toc-text">Copyright &amp; License</span></a></li></ol>
     </div>
 </div>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 
 
@@ -410,6 +480,11 @@
 			<a href="/hexo-theme-casper/" title="DEMO-Title">DEMO-Title &copy; 2019</a>
 			
 				
+			        <span hidden="true" id="/hexo-theme-casper/2018/hexo-theme-casper/" class="leancloud-visitors" data-flag-title="Hexo-Theme-Casper">
+			            <span>阅读量 </span>
+			            <span class="leancloud-visitors-count">0</span>
+			        </span>
+	    		
     		
 		</div>
 		<nav class="site-footer-nav">
@@ -452,13 +527,10 @@
 
 
 
-<script src="/hexo-theme-casper/js/lightgallery.min.js"></script>
-<link rel="stylesheet" href="/hexo-theme-casper/css/lightgallery.min.css">
-<script>
-    lightGallery(document.getElementById('lightgallery'), {
-        selector: '.post-img'
-    });
-</script>
+<link rel="stylesheet" href="/hexo-theme-casper/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/hexo-theme-casper/photoswipe/default-skin/default-skin.css">
+<script src="/hexo-theme-casper/photoswipe/photoswipe.min.js"></script>
+<script src="/hexo-theme-casper/photoswipe/photoswipe-ui-default.min.js"></script>
 
 
 
@@ -475,7 +547,7 @@
             placeholder: 'Just go go',
             pageSize: 10,
             avatar: 'mm',
-            visitor: 
+            visitor: true
         })
     });
 </script>
