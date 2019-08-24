@@ -117,19 +117,23 @@ img {
     font-size: 2rem;
 }
 
-.post-img {
-    min-height: 50px;
+.b-lazy.post-img {
+    min-height: 200px;
+    min-width: 100%;
     background: #C5D2D9 no-repeat 50% !important;
     background-size: cover;
     border-radius: 4px;
 }
 
 .b-lazy {
-    transition: opacity .5s ease-in-out;
+    width: auto;
+    transition: all .5s ease-in-out;
     opacity: .5;
 }
 
 .b-lazy.b-loaded {
+    min-height: 0;
+    min-width: 0;
     opacity: 1;
 }
 

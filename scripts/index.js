@@ -70,10 +70,10 @@ hexo.extend.generator.register('json', locals => {
 	]
 })
 
-// lazyload
+// post-img
 hexo.extend.filter.register('after_generate', () => {
 
-	if (!hexo.theme.config.lightgallery && !hexo.theme.config.lazyload) return
+	if (!hexo.theme.config.photoswipe && !hexo.theme.config.lazyload) return
 
 	'use strict'
 	const route = hexo.route;
@@ -86,12 +86,13 @@ hexo.extend.filter.register('after_generate', () => {
 			html.on("data", chunk => (htmlTxt += chunk));
 			html.on("end", () => {
 				const $ = cheerio.load(htmlTxt, { decodeEntities: false });
-				var postImg = $('#lightgallery').find('img')
+				var postImg = $('#photoswipe').find('img')
 				postImg.addClass('post-img')
-				postImg.each(function () {
+				postImg.each(function (index) {
 					var imgSrc = $(this).attr('src');
-					$(this).attr('href', imgSrc)
-					
+					$(this).attr('data-img', imgSrc)
+					$(this).attr('data-index', index)
+
 					if (hexo.theme.config.lazyload) {
 						$(this).attr('data-src', imgSrc);
 						$(this).addClass('b-lazy');
@@ -107,6 +108,6 @@ hexo.extend.filter.register('after_generate', () => {
 		res.map(obj => {
 			route.set(obj.path, obj.html);
 		})
-		);
+	);
 
 })

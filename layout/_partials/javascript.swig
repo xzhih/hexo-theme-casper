@@ -55,14 +55,11 @@
 {% endif %}
 
 {# 相册 #}
-{% if is_post() and theme.lightgallery %}
-{{ js('js/lightgallery.min') }}
-{{ css('css/lightgallery.min') }}
-<script>
-    lightGallery(document.getElementById('lightgallery'), {
-        selector: '.post-img'
-    });
-</script>
+{% if is_post() and theme.photoswipe %}
+{{ css('photoswipe/photoswipe') }}
+{{ css('photoswipe/default-skin/default-skin') }}
+{{ js('photoswipe/photoswipe.min') }}
+{{ js('photoswipe/photoswipe-ui-default.min.js') }}
 {% endif %}
 
 {# Valine 评论 #}

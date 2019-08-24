@@ -22,7 +22,7 @@
             </figure>
             {% endif %}
             <div class="post-full-content">
-                <article id="lightgallery" class="markdown-body">
+                <article id="photoswipe" class="markdown-body">
                     {{ page.content }}
                 </article>
                 <ul class="tags-postTags">
@@ -60,4 +60,9 @@
 {% if theme.post_toc %}
 {% include "public/toc.swig" %}
 {% endif %}
+
+{% if theme.photoswipe %}
+{% include "public/photoswipe.swig" %}
+{% endif %}
+
 {% endmacro %}

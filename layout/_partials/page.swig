@@ -5,7 +5,7 @@
 			<article class="post-card post no-image custom-page">
 				<article class="post-full no-image">
 					<section class="post-full-content page-full-content">
-						<div id="lightgallery" class="markdown-body">
+						<div id="photoswipe" class="markdown-body">
 							{{ page.content }}
 						</div>
 					</section>

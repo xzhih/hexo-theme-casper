@@ -48,8 +48,8 @@ widgets:
 floadheader: false
 
 # Gallery
-# https://github.com/sachinchoolur/lightgallery.js
-lightgallery: true
+# https://github.com/dimsemenov/PhotoSwipe
+photoswipe: true
 
 # LazyLoad
 # home page has enabled, this value is to post page
@@ -70,6 +70,7 @@ valine:
   placeholder: Just go go # comment box placeholder
   pageSize: 10 # pagination size
   avatar: mm # gravatar style
+  visitor: true # page view record
 
 # PWA
 # you need create a manifest.json file in hexo's source folder

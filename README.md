@@ -140,8 +140,8 @@ widgets:
   # This is a simple theme, I think 3 is enough.
 
 # Gallery
-# https://github.com/sachinchoolur/lightgallery.js
-lightgallery: true
+# https://github.com/dimsemenov/PhotoSwipe
+photoswipe: true
 
 # LazyLoad
 # home page has enabled, this value is to post page
