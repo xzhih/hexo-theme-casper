@@ -26,33 +26,30 @@
 
 <script id="scriptLoad" src="{{ url_for('/js/allinone.min.js') }}" async></script>
 
-{# 非文章页懒加载 #}
-{% if !is_post() %}
+{# 脚本加载监听 #}
 <script>
     document.getElementById('scriptLoad').addEventListener('load', function () {
-        var bLazy = new Blazy()
-    })
-</script>
-{% endif %}
+        {# 图片懒加载 #}
+        {% if !is_post() || (is_post() && theme.lazyload) %}
+            var bLazy = new Blazy();
+        {% endif %}
 
-{# 文章页懒加载 #}
-{% if is_post() and theme.lazyload %}
-<script>
-    document.getElementById('scriptLoad').addEventListener('load', function () {
-        var bLazy = new Blazy()
-    })
-</script>
-{% endif %}
+        {# 文章页浮动顶栏 #}
+        {% if is_post() && theme.floadheader %}
+        {% include "public/fload-header.swig" %}
+            postProgressBar();
+        {% endif %}
 
-{# 文章页浮动顶栏 #}
-{% if is_post() and theme.floadheader %}
-{% include "public/fload-header.swig" %}
-<script>
-    document.getElementById('scriptLoad').addEventListener('load', function () {
-        postProgressBar()
+        {# 本地搜索 #}
+        {% if theme.local_search %}
+        {% if theme.service_workers %}
+            searchFuncSW("{{ config.root }}");
+        {% else %}
+            searchFunc("{{ config.root }}");
+        {% endif %}
+        {% endif %}
     })
 </script>
-{% endif %}
 
 {# 相册 #}
 {% if is_post() and theme.photoswipe %}
@@ -80,23 +77,6 @@
         })
     });
 </script>
-{% endif %}
-
-{# 本地搜索 #}
-{% if theme.local_search %}
-{% if theme.service_workers %}
-<script>
-    document.getElementById('scriptLoad').addEventListener('load', function(){
-        searchFuncSW("{{ config.root }}")
-    });
-</script>
-{% else %}
-<script>
-    document.getElementById('scriptLoad').addEventListener('load', function(){
-        searchFunc("{{ config.root }}")
-    });
-</script>
-{% endif %}
 {% endif %}
 
 {# 百度 SEO #}
