@@ -52,7 +52,7 @@
 </script>
 
 {# 相册 #}
-{% if is_post() and theme.photoswipe %}
+{% if (is_post() || is_page()) and theme.photoswipe %}
 {{ css('photoswipe/photoswipe') }}
 {{ css('photoswipe/default-skin/default-skin') }}
 {{ js('photoswipe/photoswipe.min') }}
