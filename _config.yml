@@ -1,8 +1,8 @@
 # Config
 rss: /rss.xml           # link
-favicon: /images/Anthony-Square-Color.png
+favicon: /images/Anthony2-Square-Color.webp
 blog_logo: #/images/Anthony-Square-Color.png
-header_image: /images/imleedh-ali-677414-unsplash.jpg
+header_image: /images/imleedh-ali-677414-unsplash.webp
 bio: Software development and DevOps. Bringing solutions to life.
 post_toc: true
 
@@ -16,7 +16,7 @@ menu:
   # you can add here
 
 # author
-author_image: /images/Anthony-Square-Color.png  # link
+author_image: /images/Anthony2-Square-Color.webp  # link
 author_bio: 
 author_location: 
 
