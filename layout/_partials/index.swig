@@ -35,6 +35,9 @@
 								{% set num = 80 %}
 								{% endif %}
 								{% set content = post.content | striptags %}
+								{% if post.summary %}
+								{% set content = post.summary %}
+								{% endif %}
 								{{ content.substring(0, num) }}
 								{% if content.length > num %}...{% endif %}
 							</p>
