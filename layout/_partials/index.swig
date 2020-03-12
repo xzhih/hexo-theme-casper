@@ -17,7 +17,7 @@
 								{% if post.categories %}
 								{% for cate in post.categories %}
 								{{ cate.name }}
-								{% endfor %}| 
+								{% endfor %}|
 								{% endif %}
 								<time datetime="{{ date_xml(post.date) }}">
 									{{ date(post.date, null) }}
@@ -46,7 +46,7 @@
 					<footer class="post-card-meta">
 						<div class="author-list">
 							<div class="author-list-item">
-								<div class="author-name-tooltip">{{ config.author }}</div>
+								<div class="author-name-tooltip">{{ post.author }}</div>
 								{% if theme.author_image %}
 								<a href="/about" class="static-avatar">
 									<img class="author-profile-image" src="{{ theme.author_image }}" alt="{{ config.author }}" />

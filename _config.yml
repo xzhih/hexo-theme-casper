@@ -1,9 +1,9 @@
 # Config
 rss:            # link
-favicon: https://i.loli.net/2017/11/26/5a19c0b50432e.png
-blog_logo: 
-header_image: https://i.loli.net/2017/11/26/5a19c56faa29f.jpg
-bio: This is a demo
+favicon:
+blog_logo:
+header_image: https://i.loli.net/2020/03/11/SviQyI85oFlkKWT.jpg
+bio: 在这里，读懂南科
 post_toc: true
 
 # Keywords
@@ -17,22 +17,22 @@ menu:
 
 # author
 author_image:   # link
-author_bio: 
-author_location: 
+author_bio:
+author_location:
 
 # Social Links
 social:
-  weibo: https://weibo.com/xzhih
-  github: https://github.com/xzhih
-  twitter: https://twitter.com
-  facebook: https://facebook
-  telegram:
-  bilibili: 
-  youtube: 
+  weibo:
+  github:
+  twitter:
+  facebook:
+  telegram: https://t.me/nankeyilu
+  bilibili:
+  youtube:
   # You only can use that I have added, I will keep adding
 
 # Footer Links
-footer_text: 
+footer_text:
   # title: link
   # 粤ICP备xxxxxxx号-x: http://www.miitbeian.gov.cn
   # 粤公网安备xxxxxxx号: http://www.beian.gov.cn
@@ -61,9 +61,9 @@ local_search: true
 
 # Comment
 # https://valine.js.org
-comment: true
+comment: false
 valine:
-  notify: false # mail notifier , https://github.com/xCss/Valine/wiki 
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   appId: # your leancloud application appid
   appKey: # your leancloud application appkey
@@ -83,5 +83,5 @@ navColor: '3c484e'
 baidu: false
 
 # Google Analytics
-googleAnalytics: false
-GA_TRACKING_ID: UA-XXXXXXXXXX-1
+googleAnalytics: true
+GA_TRACKING_ID: UA-160296007-1

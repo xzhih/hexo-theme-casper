@@ -16,7 +16,7 @@
 	{
 		"@context": "http://schema.org",
 		"@type": "BreadcrumbList",
-		"itemListElement": 
+		"itemListElement":
 		[
 		{
 			"@type": "ListItem",
