@@ -2,7 +2,6 @@
 {% if site.posts.length %}
 <article class="read-next-card" {% if theme.header_image %} style="background-image: url({{ theme.header_image }})" {% endif %} >
   <header class="read-next-card-header">
-    <small class="read-next-card-header-sitetitle">&mdash; {{ config.title }} &mdash;</small>
     <h3 class="read-next-card-header-title">{{ __('recent_posts') }}</h3>
   </header>
   <div class="read-next-divider">
