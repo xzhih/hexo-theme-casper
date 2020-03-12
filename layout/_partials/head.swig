@@ -1,8 +1,8 @@
 {# HTML 中的 <head></head> 部分 #}
 {% set title = page.title %}
-{% if is_home() %} 
+{% if is_home() %}
 {% set title = config.title %}
-{% elseif is_archive() %} 
+{% elseif is_archive() %}
 {% set title = __('archive_a') %}
 {% elseif is_month() %}
 {% set title += ': ' + page.year + '/' + page.month %}
@@ -65,11 +65,12 @@
 	<meta property="og:site_name" content="{{ config.title }}">
 	<meta property="og:type" content="{% if is_post() %}article{% else %}blog{% endif %}">
 	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}">
-	<meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
+  <meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
+	<meta property="og:image" content="{% if is_post() %}{{ page.cover_img }}{% else %}https://i.loli.net/2020/03/12/XV79IRm25d4zwUA.png{% endif %}" />
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
 
 	{% if is_post() %}
-	<meta property="article:published_time" content="{{ date(page.date, 'YYYY-MM-DDTHH:MM:SS+08:00') }}"/> 
+	<meta property="article:published_time" content="{{ date(page.date, 'YYYY-MM-DDTHH:MM:SS+08:00') }}"/>
 	<meta property="article:author" content="{{ config.author }}">
 	<meta property="article:published_first" content="{{ config.title }}, {{ url_for(page.path) }}" />
 	{% endif %}
@@ -79,7 +80,7 @@
 	{{ css('css/markdown') }}
 	{{ css('css/highlight') }}
 	{{ css('css/darkmode') }} #}
-	
+
 	{{ css('css/allinonecss.min') }}
 
 	{% if theme.googleAnalytics %}
@@ -91,6 +92,6 @@
 		gtag('config', '{{ theme.GA_TRACKING_ID }}');
 	</script>
 	{% endif %}
-	
+
 	{# {% include "public/json-ld.swig" %} #}
 </head>

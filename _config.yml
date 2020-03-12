@@ -1,13 +1,13 @@
 # Config
 rss:            # link
-favicon:
+favicon: /image/favicon.png
 blog_logo:
 header_image: https://i.loli.net/2020/03/11/SviQyI85oFlkKWT.jpg
 bio: 在这里，读懂南科
 post_toc: true
 
 # Keywords
-keywords: hexo, casper, ghost, theme
+keywords: 南方科技大学, 南科大, 南科一路, 南柯一路, 新闻
 
 # Menu
 menu:
