@@ -32,7 +32,7 @@
 	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
 	<link rel="preconnect" href="//gravatar.loli.net">
 
-	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}</title>
+	<title>{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %}{% if is_home() %}{% if config.subtitle %} | {{ config.subtitle }}{% endif %}{% else %} | {{ config.title }}{% endif %}</title>
 
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
@@ -64,7 +64,7 @@
 
 	<meta property="og:site_name" content="{{ config.title }}">
 	<meta property="og:type" content="{% if is_post() %}article{% else %}blog{% endif %}">
-	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %} | {% if is_home() %}{{ config.subtitle }}{% else %}{{ config.title }}{% endif %}">
+	<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ config.title }}{% endif %}{% if is_home() %}{% if config.subtitle %} | {{ config.subtitle }}{% endif %}{% else %} | {{ config.title }}{% endif %}">
 	<meta property="og:description" content="{% if is_post() %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
 	<meta property="og:url" content="{{ config.url }}{{ url_for(page.path) }}">
 
