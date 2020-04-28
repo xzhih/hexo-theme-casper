@@ -908,9 +908,6 @@ h6 {
 
 	border-radius: 5px;
 	background: linear-gradient(135deg, rgba(0, 40, 60, .8), rgba(0, 20, 40, .7));
-
-	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
 }
 
 .read-next-card-header {
@@ -1317,15 +1314,13 @@ h6 {
 	left: 0;
 	display: flex;
 	transition: opacity .2s ease-in;
-	pointer-events: none;
+	visibility: none;
 	will-change: transform;
 	-webkit-transform: translateZ(0);
 	        transform: translateZ(0);
 	opacity: 0;
 	background: rgba(0, 25, 40, .97);
 
-	-webkit-backdrop-filter: blur(3px);
-	backdrop-filter: blur(3px);
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
 	-ms-flex-align: center;
@@ -1333,7 +1328,7 @@ h6 {
 }
 
 .search-overlay:target {
-	pointer-events: auto;
+	visibility: visible;
 
 	opacity: 1;
 }
